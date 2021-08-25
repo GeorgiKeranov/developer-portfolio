@@ -5,7 +5,7 @@
  *
  * @uses [year]
  */
-add_shortcode( 'year', 'idt_shortcode_year' );
-function idt_shortcode_year() {
+add_shortcode( 'year', 'gk_shortcode_year' );
+function gk_shortcode_year() {
 	return date( 'Y' );
 }
