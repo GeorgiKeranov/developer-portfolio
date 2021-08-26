@@ -58,7 +58,7 @@ Use this shortcode to display the current year.
 
 ### Requirements
 
-`starter-theme` requires the following dependencies:
+`gk` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
