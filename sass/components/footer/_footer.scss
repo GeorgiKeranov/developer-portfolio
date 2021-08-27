@@ -1,0 +1,69 @@
+.footer {
+	overflow: hidden;
+	position: relative;
+	margin-top: auto;
+	padding-top: 105px;
+	text-align: center;
+	
+	.footer__content {
+		padding-bottom: 20px;
+		background-color: $color-blue;
+	}
+
+	.footer__quote {
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 2px solid #fff;
+
+		blockquote {
+			font-size: 40px;
+			line-height: 1.2;
+			margin: 0;
+		}
+	}
+
+	.footer__socials {
+		overflow: hidden;
+
+		.socials {
+			justify-content: center;
+		}
+	}
+
+	.footer__copyright {
+		padding: 10px 0;
+		background-color: $color-dark-blue;
+
+		p {
+			margin: 0;
+			color: #ddd;
+		}
+	}
+
+	.footer__menu {
+		margin-bottom: 20px;
+
+		.nav {
+			ul {
+				justify-content: center
+			}
+
+			a {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 52px;
+		left: -20px;
+		right: -20px;
+		z-index: -1;
+		display: block;
+		height: 105px;
+		transform: rotate(177deg);
+		background-color: $color-blue;
+	}
+}

@@ -12,22 +12,32 @@
 ?>
 	</main><!-- /.main -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'gk' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'gk' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'gk' ), 'gk', '<a href="https://github.com/GeorgiKeranov">Georgi Keranov</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<footer class="footer">
+		<div class="footer__content">
+			<div class="footer__quote">
+				<blockquote>“Your <strong>FUTURE</strong> is created by what you do <strong>TODAY</strong> not <strong>TOMMOROW</strong>”</blockquote>
+			</div><!-- /.footer__quote -->
+
+			<div class="footer__menu">
+				<?php if ( has_nav_menu( 'header-menu' ) ) {
+					wp_nav_menu( array(
+						'theme_location' => 'header-menu',
+						'container' => 'nav',
+						'container_class' => 'nav'
+					) );
+				} ?>
+			</div><!-- /.footer__menu -->
+
+			<div class="footer__socials">
+				<?php echo get_template_part('template-parts/socials', null, array( 'show_socials_names' => true )); ?>
+			</div><!-- /.footer__socials -->
+		</div><!-- /.footer__content -->
+
+		<div class="footer__copyright">
+			<p>© Georgi Keranov 2021</p>
+		</div><!-- /.footer__copyright -->
+	</footer><!-- /.footer -->
+</div><!-- /.wrapper -->
 
 <?php wp_footer(); ?>
 
