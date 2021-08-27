@@ -25,35 +25,34 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'gk' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$gk_description = get_bloginfo( 'description', 'display' );
-			if ( $gk_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $gk_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header class="header">
+		<div class="container">
+			<div class="header__flex">
+				<div class="header__logo">
+					<?php gk_the_logo() ?>
+				</div><!-- /.header__logo -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'gk' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+				<div class="header__menu">
+					<?php if ( has_nav_menu( 'header-menu' ) ) {
+						wp_nav_menu( array(
+							'theme_location' => 'header-menu',
+							'container' => 'nav',
+							'container_class' => 'nav-header'
+						) );
+					}
+
+					echo get_template_part('template-parts/socials'); ?>
+				</div><!-- /.header__menu -->
+
+				<div class="header__menu-toggle">
+					<div></div>
+
+					<div></div>
+
+					<div></div>
+				</div><!-- /.header__menu-toggle -->
+			</div><!-- /.header__flex -->
+		</div><!-- /.container -->
+	</header><!-- /.header -->
+
+	<main class="main">
