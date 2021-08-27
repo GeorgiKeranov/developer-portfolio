@@ -19,6 +19,6 @@
     "watch:js": "webpack --watch --config webpack-config-dev.js",
     "compile:css": "node-sass sass/ -o ./",
     "compile:js": "webpack --config webpack-config-prod.js",
-    "bundle": "dir-archiver --src . --dest ../developer-portfolio.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map"
+    "bundle": "dir-archiver --src . --dest ../developer-portfolio.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map webpack-config-dev.js webpack-config-prod.js scripts.js.LICENSE.txt"
   }
 }
