@@ -1,0 +1,34 @@
+.nav-header {
+	overflow: hidden;
+
+	ul {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		padding: 0;
+		margin: 0 -10px;
+	}
+
+	li {
+		margin: 0 10px;
+	}
+
+	a {
+		color: $color-white;
+		text-decoration: none;
+		font-size: 20px;
+		transition: width .3s;
+
+		@include hover-effect-underline($color-light-blue);
+	}
+
+	.current-menu-item {
+		a {
+			color: $color-light-blue;
+
+			&:after {
+				width: 0;
+			}
+		}
+	}
+}

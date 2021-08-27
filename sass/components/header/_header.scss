@@ -1,0 +1,40 @@
+.header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	padding: 15px 0;
+	background-color: $color-dark-blue;
+	border-bottom: 3px solid $color-light-blue;
+
+	.header__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header__menu {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	.header__menu-toggle {
+		display: none;
+	}
+
+	.nav-header {
+		margin-right: 80px;
+	}
+}
+
+.admin-bar {
+	.header {
+		top: 32px;
+	}
+
+	@media (max-width: 782px) {
+		.header {
+			top: 0;
+		}
+	}
+}

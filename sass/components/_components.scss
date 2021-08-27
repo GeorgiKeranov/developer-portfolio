@@ -1,10 +1,26 @@
+/* container
+--------------------------------------------- */
+@import "container/container";
+
 /* Navigation
 --------------------------------------------- */
-@import "navigation/navigation";
+@import "navigation/nav";
 
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
+
+/* Header
+--------------------------------------------- */
+@import "header/header";
+
+/* Logo
+--------------------------------------------- */
+@import "logo/logo";
+
+/* Socials
+--------------------------------------------- */
+@import "socials/socials";
 
 /* Widgets
 --------------------------------------------- */

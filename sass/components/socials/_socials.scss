@@ -1,0 +1,22 @@
+.socials {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+	margin: 0 -15px;
+
+	li {
+		margin: 0 15px;
+	}
+
+	a {
+		svg {
+			transition: fill .5s;
+		}
+
+		&:hover {
+			svg {
+				fill: $color-light-blue;
+			}
+		}
+	}
+}
