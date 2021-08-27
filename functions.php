@@ -63,7 +63,7 @@ if ( ! function_exists( 'gk_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'gk' ),
+				'header-menu' => esc_html__( 'Header Menu', 'gk' ),
 			)
 		);
 
@@ -154,7 +154,8 @@ add_action( 'widgets_init', 'gk_widgets_init' );
  */
 function gk_scripts() {
 	wp_enqueue_style( 'gk-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'gk-style', 'rtl', 'replace' );
+
+	wp_enqueue_style( 'gk-montserrat-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700', array(), _S_VERSION );
 
 	// wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/js/custom-script.js', array(), _S_VERSION, true );
 
@@ -175,7 +176,12 @@ function gk_custom_options() {
 add_action( 'init', 'gk_custom_options', 0 );
 
 /**
- * Include file from inc directory
+ * Load dynamically logo for the theme
  */
-// require get_template_directory() . '/inc/example.php';
+require get_template_directory() . '/inc/logo-dynamic.php';
+
+/**
+ * Load svg icons with simple function
+ */
+require get_template_directory() . '/inc/load-svg-icon.php';
 
