@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
+<div class="wrapper">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'gk' ); ?></a>
 
 	<header class="header">
@@ -37,7 +37,7 @@
 						wp_nav_menu( array(
 							'theme_location' => 'header-menu',
 							'container' => 'nav',
-							'container_class' => 'nav-header'
+							'container_class' => 'nav'
 						) );
 					}
 
