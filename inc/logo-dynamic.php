@@ -1,7 +1,7 @@
 <?php
 
 function gk_the_logo() {
-	$logo_id = carbon_get_theme_option( 'gk_logo' );
+	$logo_id = get_theme_mod( 'custom_logo' );
 
 	$logo_details = gk_get_logo_details( $logo_id );
 
