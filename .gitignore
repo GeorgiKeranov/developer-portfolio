@@ -2,3 +2,5 @@ vendor*
 node_modules*
 style.css
 style.css.map
+scripts.js
+scripts.js.LICENSE.txt
