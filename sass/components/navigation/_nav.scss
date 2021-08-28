@@ -57,3 +57,18 @@
 		}
 	}
 }
+
+.nav--footer {
+	@include breakpoint(mobile) {
+		ul {
+			flex-wrap: wrap;
+		}
+	}
+
+	@include breakpoint(mobile-portrait) {
+		li {
+			width: 100%;
+		}
+	}
+}
+

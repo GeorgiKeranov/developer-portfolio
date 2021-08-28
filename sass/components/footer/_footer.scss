@@ -6,7 +6,7 @@
 	text-align: center;
 	
 	.footer__content {
-		padding-bottom: 20px;
+		padding: 0 15px 20px;
 		background-color: $color-blue;
 	}
 
@@ -65,5 +65,21 @@
 		height: 105px;
 		transform: rotate(177deg);
 		background-color: $color-blue;
+	}
+
+	@include breakpoint(tablet-portrait) {
+		.footer__quote {
+			blockquote {
+				font-size: 32px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile-small) {
+		.footer__quote {
+			blockquote {
+				font-size: 26px;
+			}
+		}
 	}
 }
