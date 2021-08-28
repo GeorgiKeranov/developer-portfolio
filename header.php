@@ -37,7 +37,7 @@
 						wp_nav_menu( array(
 							'theme_location' => 'header-menu',
 							'container' => 'nav',
-							'container_class' => 'nav'
+							'container_class' => 'nav nav--header'
 						) );
 					}
 
