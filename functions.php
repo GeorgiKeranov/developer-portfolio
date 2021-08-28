@@ -157,7 +157,7 @@ function gk_scripts() {
 
 	wp_enqueue_style( 'gk-montserrat-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700', array(), _S_VERSION );
 
-	wp_enqueue_script( 'gk-script', get_template_directory_uri() . '/scripts.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'gk-script', get_template_directory_uri() . '/scripts.js', array( 'jquery' ), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

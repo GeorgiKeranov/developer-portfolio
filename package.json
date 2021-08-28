@@ -12,13 +12,15 @@
     "dir-archiver": "^1.1.1",
     "node-sass": "^6.0.1",
     "webpack": "^5.51.1",
-    "webpack-cli": "^4.8.0"
+    "webpack-cli": "^4.8.0",
+    "webpack-merge": "^5.8.0"
   },
   "scripts": {
     "watch:css": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "watch:js": "webpack --watch --config webpack-config-dev.js",
+    "watch:js": "webpack --watch --config webpack.dev.js",
     "compile:css": "node-sass sass/ -o ./",
-    "compile:js": "webpack --config webpack-config-prod.js",
-    "bundle": "dir-archiver --src . --dest ../developer-portfolio.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map webpack-config-dev.js webpack-config-prod.js scripts.js.LICENSE.txt"
+    "compile:js": "webpack --config webpack.prod.js",
+    "compile": "node-sass sass/ -o ./ && webpack --config webpack.prod.js",
+    "bundle": "dir-archiver --src . --dest ../developer-portfolio.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map webpack.dev.js webpack.prod.js scripts.js.LICENSE.txt"
   }
 }
