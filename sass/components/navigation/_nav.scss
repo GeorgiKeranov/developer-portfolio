@@ -32,3 +32,28 @@
 		}
 	}
 }
+
+.nav--header {
+	@include breakpoint(tablet-portrait) {
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			list-style-type: none;
+			padding-left: 0;
+			margin: 0;
+			text-align: center;
+		}
+
+		li {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		a {
+			font-size: 28px;
+		}
+	}
+}
