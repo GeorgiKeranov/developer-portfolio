@@ -40,7 +40,7 @@ if ( ! function_exists( 'gk_setup' ) ) :
 		 * If you're building a theme based on Starter Theme, use a find and replace
 		 * to change 'gk' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'gk', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'gk', GK_THEME_DIR . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -183,10 +183,19 @@ add_action( 'init', 'gk_custom_options', 0 );
 /**
  * Load dynamically logo for the theme
  */
-require get_template_directory() . '/inc/logo-dynamic.php';
+require GK_THEME_DIR . '/inc/logo-dynamic.php';
 
 /**
  * Load svg icons with simple function
  */
-require get_template_directory() . '/inc/load-svg-icon.php';
+require GK_THEME_DIR . '/inc/load-svg-icon.php';
 
+/**
+ * Disable guttenberg editor for certain templates
+ */
+require GK_THEME_DIR . '/inc/disable-gutenberg.php';
+
+/**
+ * Disable classic editor for certain templates
+ */
+require GK_THEME_DIR . '/inc/disable-classic-editor.php';
