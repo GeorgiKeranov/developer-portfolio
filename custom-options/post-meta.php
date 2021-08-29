@@ -1,9 +1,20 @@
 <?php
-// use Carbon_Fields\Container;
-// use Carbon_Fields\Field;
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
 
-// Container::make( 'post_meta', __( 'Custom Data', 'gk' ) )
-// 	->where( 'post_template', '=', 'templates/page-builder.php' )
-// 	->add_fields( array(
-// 		Field::make( 'text', 'gk_text', 'Text Field' ),
-// 	) );
+/**
+ * Page Builder
+ */
+Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
+	->where( 'post_template', '=', 'templates/page-builder.php' )
+	->add_fields( array(
+		Field::make( 'complex', 'gk_page_builder_sections', 'Sections' )
+			->set_layout( 'tabbed-vertical' )
+
+			/**
+			 * Example section
+			 */
+			->add_fields( 'section-example', __( 'Section Example', 'gk' ), array(
+				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+			) )
+	) );
