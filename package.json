@@ -22,5 +22,8 @@
     "compile:js": "webpack --config webpack.prod.js",
     "compile": "node-sass sass/ -o ./ && webpack --config webpack.prod.js",
     "bundle": "dir-archiver --src . --dest ../developer-portfolio.zip --exclude .DS_Store .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map webpack.dev.js webpack.prod.js scripts.js.LICENSE.txt"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
   }
 }
