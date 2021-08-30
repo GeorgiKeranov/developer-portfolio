@@ -16,7 +16,7 @@ $sections_without_fields = array(
 	// 'section_name',
 );
 
-foreach ( $sections as $section ) {
+foreach ( $sections as $index => $section ) {
 	$section_type = $section['_type'];
 
 	$template_path = 'template-parts/page-builder/' . $section_type;
@@ -40,6 +40,11 @@ foreach ( $sections as $section ) {
 	if ( empty( $section ) && !in_array( $section_type, $sections_without_fields ) ) {
 		continue;
 	}
+
+	/**
+	 * Add unique index for each section to build unquie id for two or more sections from one type
+	 */
+	$section['index'] = $index;
 
 	get_template_part( $template_path, null, $section );
 }
