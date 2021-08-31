@@ -1,8 +1,5 @@
 import 'particles.js'
 
 export default function particles() {
-
-	// particlesJS.load('main', globalVariables.siteUrl + '/js/particles/particles.json', function() {
-	//   console.log('callback - particles.js config loaded');
-	// });
+	particlesJS.load('section-intro-0', globalVariables.siteUrl + '/js/particles/particles.json');
 }
