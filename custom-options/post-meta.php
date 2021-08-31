@@ -12,9 +12,12 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 			->set_layout( 'tabbed-vertical' )
 
 			/**
-			 * Example section
+			 * Section Intro
 			 */
-			->add_fields( 'section-example', __( 'Section Example', 'gk' ), array(
-				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+			->add_fields( 'section-intro', __( 'Section Intro', 'gk' ), array(
+				Field::make( 'rich_text', 'text', __( 'Text', 'gk' ) )
+					->set_width( 70 ),
+				Field::make( 'image', 'image', __( 'Image', 'gk' ) )
+					->set_width( 30 )
 			) )
 	) );
