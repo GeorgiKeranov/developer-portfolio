@@ -20,4 +20,11 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 				Field::make( 'image', 'image', __( 'Image', 'gk' ) )
 					->set_width( 30 )
 			) )
+
+			/**
+			 * Section Text
+			 */
+			->add_fields( 'section-text', __( 'Section Text', 'gk' ), array(
+				Field::make( 'rich_text', 'text', __( 'Text', 'gk' ) )
+			) )
 	) );
