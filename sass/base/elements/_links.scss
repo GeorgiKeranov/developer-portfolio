@@ -1,9 +1,8 @@
 a {
 	color: $color__link;
+	text-decoration: none;
 
-	&:hover,
-	&:focus,
-	&:active {
+	&:hover {
 		color: $color__link-hover;
 	}
 
