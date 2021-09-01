@@ -33,9 +33,9 @@
 				</div><!-- /.header__logo -->
 
 				<div class="header__menu">
-					<?php if ( has_nav_menu( 'header-menu' ) ) {
+					<?php if ( has_nav_menu( 'main-menu' ) ) {
 						wp_nav_menu( array(
-							'theme_location' => 'header-menu',
+							'theme_location' => 'main-menu',
 							'container' => 'nav',
 							'container_class' => 'nav nav--header'
 						) );

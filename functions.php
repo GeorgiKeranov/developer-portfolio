@@ -63,7 +63,7 @@ if ( ! function_exists( 'gk_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'header-menu' => esc_html__( 'Header Menu', 'gk' ),
+				'main-menu' => esc_html__( 'Main Menu', 'gk' ),
 			)
 		);
 
