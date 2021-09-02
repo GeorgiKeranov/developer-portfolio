@@ -199,3 +199,9 @@ require GK_THEME_DIR . '/inc/disable-gutenberg.php';
  * Disable classic editor for certain templates
  */
 require GK_THEME_DIR . '/inc/disable-classic-editor.php';
+
+/**
+ * Add function to render button based on fields of button
+ */
+require GK_THEME_DIR . '/inc/render-button.php';
+
