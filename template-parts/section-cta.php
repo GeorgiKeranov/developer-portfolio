@@ -15,7 +15,7 @@ if ( empty( $args ) ) {
 		<div class="section__flex">
 				<div class="section__text">
 					<?php if ( !empty( $args['text'] ) ) : ?>
-						<h2><?php echo esc_html( $args['text'] ) ?></h2>
+						<h3><?php echo esc_html( $args['text'] ) ?></h3>
 					<?php endif; ?>
 				</div><!-- /.section__text -->
 
