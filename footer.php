@@ -12,25 +12,28 @@
 ?>
 	</main><!-- /.main -->
 
-	<div class="section-call-to-action">
-		<div class="container">
-			<div class="section__flex">
-				<div class="section__text">
-					<h2>Do you have any questions? I would be happy if I can help.</h2>
-				</div><!-- /.section__text -->
+	<?php
+	$section_cta_fields = array(
+		'text' => carbon_get_theme_option( 'gk_cta_text' ),
+		'btn_label' => carbon_get_theme_option( 'gk_cta_btn_label' ),
+		'btn_link' => carbon_get_theme_option( 'gk_cta_btn_link' ),
+		'btn_new_tab' => carbon_get_theme_option( 'gk_cta_btn_new_tab' ),
+	);
 
-				<div class="section__action">
-					<a class="btn" href="#">Get In Touch</a>
-				</div><!-- /.section__action -->
-			</div><!-- /.section__flex -->
-		</div><!-- /.container -->
-	</div><!-- /.section-call-to-action -->
+	get_template_part( 'template-parts/section-cta', null, $section_cta_fields );
+
+
+	$footer_text = carbon_get_theme_option( 'gk_footer_text' );
+	$footer_copyright = carbon_get_theme_option( 'gk_footer_copyright' );
+	?>
 
 	<footer class="footer">
 		<div class="footer__content">
-			<div class="footer__quote">
-				<blockquote>“Your <strong>FUTURE</strong> is created by what you do <strong>TODAY</strong> not <strong>TOMMOROW</strong>”</blockquote>
-			</div><!-- /.footer__quote -->
+			<?php if ( !empty( $footer_text ) ) : ?>
+				<div class="footer__quote">
+					<?php echo apply_filters( 'the_content', $footer_text ); ?>
+				</div><!-- /.footer__quote -->
+			<?php endif; ?>
 
 			<div class="footer__menu">
 				<?php if ( has_nav_menu( 'main-menu' ) ) {
@@ -47,9 +50,11 @@
 			</div><!-- /.footer__socials -->
 		</div><!-- /.footer__content -->
 
-		<div class="footer__copyright">
-			<p>© Georgi Keranov 2021</p>
-		</div><!-- /.footer__copyright -->
+		<?php if ( !empty( $footer_copyright ) ) : ?>
+			<div class="footer__copyright">
+				<p><?php echo do_shortcode( esc_html( $footer_copyright ) ) ?></p>
+			</div><!-- /.footer__copyright -->
+		<?php endif; ?>
 	</footer><!-- /.footer -->
 </div><!-- /.wrapper -->
 
