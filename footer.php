@@ -12,6 +12,20 @@
 ?>
 	</main><!-- /.main -->
 
+	<div class="section-call-to-action">
+		<div class="container">
+			<div class="section__flex">
+				<div class="section__text">
+					<h2>Do you have any questions? I would be happy if I can help.</h2>
+				</div><!-- /.section__text -->
+
+				<div class="section__action">
+					<a class="btn" href="#">Get In Touch</a>
+				</div><!-- /.section__action -->
+			</div><!-- /.section__flex -->
+		</div><!-- /.container -->
+	</div><!-- /.section-call-to-action -->
+
 	<footer class="footer">
 		<div class="footer__content">
 			<div class="footer__quote">

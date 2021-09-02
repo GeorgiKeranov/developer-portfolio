@@ -1,0 +1,22 @@
+.section-call-to-action {
+	padding: 30px 0;
+
+	.section__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px;
+		background-color: $color-dark-blue-2;
+		color: $color-white;
+		border-radius: 12px;
+	}
+
+	h2 {
+		margin-bottom: 0;
+		font-size: 22px;
+	}
+
+	a {
+		margin-bottom: 0;
+	}
+}
