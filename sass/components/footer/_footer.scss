@@ -5,8 +5,23 @@
 	padding-top: 105px;
 	text-align: center;
 	color: $color-white;
+	background-color: $color-dark-blue;
 	
+	&:before {
+		content: '';
+		position: absolute;
+		top: 52px;
+		left: -20px;
+		right: -20px;
+		display: block;
+		height: 105px;
+		transform: rotate(177deg);
+		background-color: $color-blue;
+	}
+
 	.footer__content {
+		position: relative;
+		z-index: 10;
 		padding: 20px 15px;
 		background-color: $color-blue;
 	}
@@ -57,19 +72,6 @@
 				font-size: 20px;
 			}
 		}
-	}
-
-	&:before {
-		content: '';
-		position: absolute;
-		top: 52px;
-		left: -20px;
-		right: -20px;
-		z-index: -1;
-		display: block;
-		height: 105px;
-		transform: rotate(177deg);
-		background-color: $color-blue;
 	}
 
 	@include breakpoint(tablet-portrait) {
