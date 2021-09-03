@@ -6,6 +6,7 @@
 	.section__flex {
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 40px;
 	}
 
 	.section__left,
@@ -87,5 +88,9 @@
 			font-size: 13px;
 			opacity: .95;
 		}
+	}
+
+	.section__action {
+		text-align: center
 	}
 }
