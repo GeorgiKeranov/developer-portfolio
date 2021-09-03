@@ -33,7 +33,11 @@
 				</div>
 
 				<div class="section__skills">
-					<?php foreach ( $args['skills'] as $skill ) : ?>
+					<?php foreach ( $args['skills'] as $skill ) :
+						if ( !is_numeric( $skill['percentage'] ) ) {
+							continue;
+						} ?>
+						
 						<div class="section__skill">
 							<h5><?php echo esc_html( $skill['name'] ) ?></h5>
 
