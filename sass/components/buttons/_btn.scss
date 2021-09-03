@@ -14,3 +14,14 @@
 		color: $color-blue;
 	}
 }
+
+.btn--alt {
+	border-color: $color-light-blue;
+	background-color: $color-dark-blue;
+	color: $color-light-blue;
+
+	&:hover {
+		background-color: $color-light-blue;
+		color: $color-dark-blue;
+	}
+}
