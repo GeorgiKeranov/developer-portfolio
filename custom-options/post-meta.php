@@ -81,4 +81,47 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 					) )
 					->set_width( 20 ),
 			) )
+
+			/**
+			 * Section Selected Projects
+			 */
+			->add_fields( 'section-selected-projects', __( 'Section Selected Projects', 'gk' ), array(
+				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+				Field::make( 'association', 'projects', __( 'Select Projects', 'gk' ) )
+					->set_types( array(
+						array(
+							'type' => 'post',
+							'post_type' => 'gk_project'
+						)
+					) ),
+				Field::make( 'text', 'btn_label', __( 'Button Label', 'gk' ) )
+					->set_width( 40 ),
+				Field::make( 'text', 'btn_link', __( 'Button Label', 'gk' ) )
+					->set_width( 40 ),
+				Field::make( 'select', 'btn_new_tab', __( 'Open Button In New Tab', 'gk' ) )
+					->set_options( array(
+						'no' => __( 'No', 'gk' ),
+						'yes' => __( 'Yes', 'gk' ),
+					) )
+					->set_width( 20 ),
+			) )
+	) );
+
+/**
+ * Project
+ */
+Container::make( 'post_meta', __( 'Project Settings', 'gk' ) )
+	->where( 'post_type', '=', 'gk_project' )
+	->add_fields( array(
+		Field::make( 'image', 'gk_logo', __( 'Logo', 'gk' ) ),
+		Field::make( 'media_gallery', 'gk_images', __( 'Images', 'gk' ) )
+			->set_type( array( 'image' ) ),
+		Field::make( 'text', 'gk_website_link', __( 'Website Link', 'gk' ) ),
+		Field::make( 'text', 'gk_github_link', __( 'Github Link', 'gk' ) ),
+		Field::make( 'complex', 'gk_technologies', __( 'Technologies', 'gk' ) )
+			->set_layout( 'tabbed-horizontal' )
+			->add_fields( array(
+				Field::make( 'text', 'technology', __( 'Technology', 'gk' ) )
+			) ),
+
 	) );
