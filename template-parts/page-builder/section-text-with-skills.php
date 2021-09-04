@@ -52,7 +52,7 @@
 		</div><!-- /.section__flex -->
 
 		<div class="section__action">
-			<?php gk_render_button( $args['btn_label'], $args['btn_link'], $args['btn_new_tab'], 'btn btn--alt' ) ?>
+			<?php gk_render_button( $args['btn_label'], $args['btn_link'], $args['btn_new_tab'], 'btn btn--light-blue' ) ?>
 		</div><!-- /.section__action -->
 	</div><!-- /.container -->
 </div><!-- /.section-text-with-skills -->

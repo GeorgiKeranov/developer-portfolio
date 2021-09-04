@@ -4,9 +4,10 @@
 	text-decoration: none;
 	background-color: $color-blue;
 	color: $color-white;
-	border: 1px solid $color-blue;
+	border: 2px solid $color-blue;
 	transition: color .3s, background-color .3s;
 	font-size: 22px;
+	font-weight: 700;
     border-radius: 30px;
 
 	&:hover {
@@ -15,7 +16,7 @@
 	}
 }
 
-.btn--alt {
+.btn--light-blue {
 	border-color: $color-light-blue;
 	background-color: $color-dark-blue;
 	color: $color-light-blue;
@@ -24,4 +25,15 @@
 		background-color: $color-light-blue;
 		color: $color-dark-blue;
 	}
+}
+
+.btn--dark-blue {
+	border-color: $color-dark-blue-2;
+	background-color: $color-dark-blue-2;
+	color: $color-white;
+
+	&:hover {
+		background-color: $color-white;
+		color: $color-dark-blue-2;
+	}	
 }
