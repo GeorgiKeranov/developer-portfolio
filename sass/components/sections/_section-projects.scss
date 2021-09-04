@@ -1,0 +1,142 @@
+.section-projects {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -12px;
+
+	.section__project {
+		width: 50%;
+		padding: 0 12px;
+		margin-bottom: 40px;
+	}
+
+	.section__project-inner {
+		background-color: $color-white;
+		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
+	}
+
+	.section__image-background {
+		position: relative;
+		padding-top: 55%;
+		background-size: cover;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-color: #000;
+		overflow: hidden;
+
+		a {
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 30;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: $color-black;
+			opacity: .3;
+			transition: opacity .3s;
+		}
+
+		&:hover:before {
+			opacity: 0;
+		}
+	}
+
+	.section__image-background--with-logo {
+		.section__image-logo {
+			width: 200px;
+			height: 200px;
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 10;
+			transition: opacity .3s;
+		}
+
+		&:before {
+			opacity: .7;
+		}
+
+		&:hover {
+			.section__image-logo {
+				opacity: 0;
+			}
+		}
+
+		&:hover:before {
+			opacity: 0;
+		}
+	}
+
+	.section__details {
+		padding: 15px 15px;
+		text-align: center;
+		overflow: hidden;
+
+		h4 {
+			color: $color-dark-blue-2;
+			margin-bottom: 5px;
+
+			a {
+				color: inherit;
+				transition: color .3s;
+
+				&:hover {
+					color: $color-blue;
+				}
+			}
+		}
+	}
+
+	.section__excerpt {
+		margin-bottom: 10px;
+		
+		p {
+			margin: 0;
+		}
+	}
+
+	.section__technologies {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 0 -3px;
+
+		li {
+			margin: 0 3px 5px;
+		}
+
+		p {
+			background-color: $color-dark-blue-2;
+			padding: 4px 8px;
+			border-radius: 20px;
+			font-size: 11px;
+			font-weight: 700;
+			color: $color-white;
+			margin-bottom: 0;
+		}
+	}
+
+	.btn {
+		border-radius: 0;
+		padding: 6px 15px;
+		width: 100%;
+		font-size: 15px;
+	}
+}
