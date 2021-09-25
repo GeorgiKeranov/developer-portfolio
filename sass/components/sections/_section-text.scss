@@ -4,6 +4,7 @@
 	p {
 		color: $color-gray;
 		font-size: 24px;
+		margin-bottom: 20px;
 
 		strong {
 			color: $color-gray-bold;
@@ -22,5 +23,29 @@
 				opacity: .4;
 			}	
 		}
+	}
+
+	.btn {
+		margin-top: 15px;
+	}
+
+	@include breakpoint(desktop-small) {
+		p {
+			font-size: 20px;
+		}
+	}
+
+	@include breakpoint(tablet-portrait) {
+		padding: 30px 0;
+	}
+
+	@include breakpoint(mobile) {
+		h2 {
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: 17px;
+		}	
 	}
 }
