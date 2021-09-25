@@ -6,7 +6,7 @@
 	.section__project {
 		width: 50%;
 		padding: 0 12px;
-		margin-bottom: 40px;
+		margin-bottom: 25px;
 	}
 
 	.section__project-background {
@@ -132,5 +132,9 @@
 			color: $color-black;
 			margin-bottom: 0;
 		}
+	}
+
+	.section__action {
+		margin-top: 30px;
 	}
 }
