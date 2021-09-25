@@ -118,10 +118,16 @@ Container::make( 'post_meta', __( 'Project Settings', 'gk' ) )
 			->set_type( array( 'image' ) ),
 		Field::make( 'text', 'gk_website_link', __( 'Website Link', 'gk' ) ),
 		Field::make( 'text', 'gk_github_link', __( 'Github Link', 'gk' ) ),
-		Field::make( 'complex', 'gk_technologies', __( 'Technologies', 'gk' ) )
+		Field::make( 'complex', 'gk_main_technologies', __( 'Main Technologies', 'gk' ) )
 			->set_layout( 'tabbed-horizontal' )
 			->add_fields( array(
 				Field::make( 'text', 'technology', __( 'Technology', 'gk' ) )
-			) ),
-
+			) )
+			->set_header_template( '<%- technology %>' ),
+		Field::make( 'complex', 'gk_technologies', __( 'All Technologies', 'gk' ) )
+			->set_layout( 'tabbed-horizontal' )
+			->add_fields( array(
+				Field::make( 'text', 'technology', __( 'Technology', 'gk' ) )
+			) )
+			->set_header_template( '<%- technology %>' )
 	) );
