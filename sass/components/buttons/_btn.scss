@@ -9,10 +9,21 @@
 	font-size: 22px;
 	font-weight: 700;
     border-radius: 30px;
+    text-align: center;
 
 	&:hover {
 		background-color: $color-white;
 		color: $color-blue;
+	}
+
+	@include breakpoint(desktop-small) {
+		padding: 7px 30px;
+		font-size: 20px;
+	}
+
+	@include breakpoint(mobile) {
+		padding: 5px 20px;
+		font-size: 18px;
 	}
 }
 
