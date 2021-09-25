@@ -9,18 +9,14 @@
 		margin-bottom: 40px;
 	}
 
-	.section__project-inner {
-		background-color: $color-white;
-		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
-	}
-
-	.section__image-background {
+	.section__project-background {
 		position: relative;
 		padding-top: 55%;
 		background-size: cover;
 		background-position: top center;
 		background-repeat: no-repeat;
 		background-color: #000;
+		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
 		overflow: hidden;
 
 		a {
@@ -33,6 +29,12 @@
 			z-index: 30;
 		}
 
+		&:hover {
+			.section__project-content {
+				opacity: 0;
+			}
+		}
+
 		&:before {
 			content: '';
 			display: block;
@@ -42,7 +44,7 @@
 			left: 0;
 			right: 0;
 			background-color: $color-black;
-			opacity: .3;
+			opacity: .85;
 			transition: opacity .3s;
 		}
 
@@ -51,33 +53,31 @@
 		}
 	}
 
-	.section__image-background--with-logo {
-		.section__image-logo {
-			width: 200px;
-			height: 200px;
-			background-size: contain;
-			background-position: center;
-			background-repeat: no-repeat;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			z-index: 10;
-			transition: opacity .3s;
-		}
+	.section__project-content {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		transition: opacity .3s;
+	}
 
-		&:before {
-			opacity: .7;
-		}
+	.section__image-logo {
+		width: 200px;
+		height: 100px;
+		margin: 0 auto;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: 10;
+	}
 
-		&:hover {
-			.section__image-logo {
-				opacity: 0;
-			}
-		}
-
-		&:hover:before {
-			opacity: 0;
+	.section__title {
+		h2 {
+			color: $color-light-blue;
 		}
 	}
 
@@ -85,6 +85,7 @@
 		padding: 15px 15px;
 		text-align: center;
 		overflow: hidden;
+		color: $color-white;
 
 		h4 {
 			color: $color-dark-blue-2;
@@ -123,20 +124,13 @@
 		}
 
 		p {
-			background-color: $color-dark-blue-2;
+			background-color: $color-white;
 			padding: 4px 8px;
 			border-radius: 20px;
 			font-size: 11px;
 			font-weight: 700;
-			color: $color-white;
+			color: $color-black;
 			margin-bottom: 0;
 		}
-	}
-
-	.btn {
-		border-radius: 0;
-		padding: 6px 15px;
-		width: 100%;
-		font-size: 15px;
 	}
 }
