@@ -38,6 +38,7 @@
 
 			p {
 				margin-bottom: 0;
+				font-size: inherit;
 			}
 		}
 	}
@@ -74,7 +75,7 @@
 		}
 	}
 
-	@include breakpoint(tablet-portrait) {
+	@include breakpoint(desktop) {
 		.footer__quote {
 			blockquote {
 				font-size: 32px;
@@ -82,10 +83,34 @@
 		}
 	}
 
+	@include breakpoint(tablet-portrait) {
+		.footer__quote {
+			blockquote {
+				font-size: 27px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		.footer__quote {
+			blockquote {
+				font-size: 24px;
+			}
+		}
+	}
+
+	@include breakpoint(mobile-portrait) {
+		padding-top: 70px;
+
+		&:before {
+			top: 50px;
+		}
+	}
+
 	@include breakpoint(mobile-small) {
 		.footer__quote {
 			blockquote {
-				font-size: 26px;
+				font-size: 21px;
 			}
 		}
 	}
