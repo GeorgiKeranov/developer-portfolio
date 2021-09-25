@@ -31,3 +31,75 @@ h5 {
 h6 {
 	font-size: 10px;
 }
+
+@include breakpoint(desktop-small) {
+	h1 {
+		font-size: 32px;
+	}
+
+	h2 {
+		font-size: 27px;
+	}
+
+	h3 {
+		font-size: 22px;
+	}
+}
+
+@include breakpoint(tablet-portrait) {
+	h1 {
+		font-size: 29px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 19px;
+	}
+
+	h4 {
+		font-size: 17px;
+	}
+
+	h5 {
+		font-size: 13px;
+	}
+
+	h6 {
+		font-size: 8px;
+	}
+}
+
+@include breakpoint(mobile) {
+	h1 {
+		font-size: 27px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+
+	h3 {
+		font-size: 19px;
+	}
+
+	h4 {
+		font-size: 16px;
+	}
+
+	h5 {
+		font-size: 13px;
+	}
+
+	h6 {
+		font-size: 8px;
+	}
+}
+
+@include breakpoint(mobile-small) {
+	h1 {
+		font-size: 24px;
+	}
+}

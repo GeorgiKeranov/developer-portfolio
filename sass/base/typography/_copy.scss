@@ -49,3 +49,9 @@ ins {
 big {
 	font-size: 125%;
 }
+
+@include breakpoint(mobile) {
+	p {
+		font-size: 14px;
+	}
+}
