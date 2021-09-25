@@ -12,6 +12,7 @@
 	.section__project-background {
 		position: relative;
 		padding-top: 55%;
+		min-height: 300px;
 		background-size: cover;
 		background-position: top center;
 		background-repeat: no-repeat;
@@ -63,6 +64,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		transition: opacity .3s;
+		padding: 0 10px;
 	}
 
 	.section__image-logo {
@@ -82,7 +84,7 @@
 	}
 
 	.section__details {
-		padding: 15px 15px;
+		padding: 15px 0;
 		text-align: center;
 		overflow: hidden;
 		color: $color-white;
@@ -136,5 +138,15 @@
 
 	.section__action {
 		margin-top: 30px;
+	}
+
+	@include breakpoint(mobile-portrait) {
+		.section__project {
+			width: 100%;
+		}
+
+		h2 {
+			font-size: 20px;
+		}
 	}
 }
