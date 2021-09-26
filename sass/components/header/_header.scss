@@ -125,6 +125,12 @@
 		top: 32px;
 	}
 
+	.header--menu-active {
+		.header__menu {
+			padding-top: 135px;
+		}
+	}
+
 	@media (max-width: 782px) {
 		.header {
 			top: 0;
