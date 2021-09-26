@@ -67,7 +67,7 @@
 
 	@include breakpoint(mobile-portrait) {
 		li {
-			width: 100%;
+			margin: 0 7px;
 		}
 	}
 }
