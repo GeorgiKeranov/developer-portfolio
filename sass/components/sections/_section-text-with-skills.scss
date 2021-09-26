@@ -125,8 +125,11 @@
 			margin-bottom: 20px;
 		}
 
-		.section__text h4 {
-			margin-bottom: 3px;
+		.section__text {
+			h4 {
+				font-size: 14px;
+				margin-bottom: 3px;
+			}
 		}
 	}
 }
