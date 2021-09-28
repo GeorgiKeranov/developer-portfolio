@@ -3,7 +3,8 @@ if ( empty( $args['skills'] ) ) {
 	return;
 }
 
-$count_of_skills = count( $args['skills'] );
+$skills = $args['skills'];
+$count_of_skills = count( $skills );
 $split_skills_on_index = intval($count_of_skills / 2);
 
 $is_count_of_skills_odd_number = $count_of_skills % 2 === 1;
@@ -15,9 +16,10 @@ function gk_render_section_skill($skill, $is_active = false) {
 	$skill_icon_url = wp_get_attachment_image_url( $skill['icon'] );
 	?>
 
-	<div class="section__skill<?php echo $is_active ? ' section__skill--active' : '' ?>" style="background-image: url(<?php echo $skill_icon_url ?>)">
-		<a href="#" data-percentage="<?php echo esc_html( $skill['percentage'] ) ?>" data-name="<?php echo esc_html( $skill['name'] ) ?>">
-		</a><!-- /.section__skill -->
+	<div class="section__skill<?php echo $is_active ? ' section__skill--active' : '' ?>">
+		<a href="#" data-percentage="<?php echo esc_html( $skill['percentage'] ) ?>%" data-name="<?php echo esc_html( $skill['name'] ) ?>">
+			<span style="background-image: url(<?php echo $skill_icon_url ?>)"></span>
+		</a>
 	</div><!-- /.section__skill -->
 <?php } ?>
 
@@ -36,25 +38,27 @@ function gk_render_section_skill($skill, $is_active = false) {
 		<div class="section__body">
 			<div class="section__skills-left">
 				<?php for ( $index = 0; $index < $split_skills_on_index; $index++ ) {
-					gk_render_section_skill( $args['skills'][$index] );
+					gk_render_section_skill( $skills[$index], $index === 0 );
 				} ?>
 			</div><!-- /.section__skills-left -->
 			
-			<div class="section__percentage">
-				<div class="section__skill-name">
-					<h3><?php echo $args['skills'][0]['name'] ?></h3>
-				</div><!-- /.section__skill-name -->
+			<div class="section__skill-selected">
+				<div class="section__circle">
+					<?php $skill_first = $skills[0]; ?>
+					<div class="section__circle-fill" style="height: <?php echo $skill_first['percentage'] ?>%">
+					</div><!-- /.section__circle-fill -->
+					
+					<div class="section__text">
+						<h2><?php echo $skill_first['percentage'] ?>%</h2>
 
-				<div class="section__percentage">
-					<div class="section__percentage-bar">
-						<span class="section__percentage-active" style="height: <?php echo $args['skills'][0]['percentage'] ?>"></span>
-					</div><!-- /.section__percentage-bar -->
-				</div><!-- /.section__percentage -->
-			</div><!-- /.section__percentage -->
+						<h3><?php echo $skill_first['name'] ?></h3>
+					</div><!-- /.section__text -->
+				</div><!-- /.section__circle -->
+			</div><!-- /.section__skill-selected -->
 
 			<div class="section__skills-right">
-				<?php for ( $index = $split_skills_on_index + 1; $index < $count_of_skills; $index++ ) {
-					gk_render_section_skill( $args['skills'][$index] );
+				<?php for ( $index = $split_skills_on_index; $index < $count_of_skills; $index++ ) {
+					gk_render_section_skill( $skills[$index] );
 				} ?>
 			</div><!-- /.section__skills-right -->
 		</div><!-- /.section__body -->
