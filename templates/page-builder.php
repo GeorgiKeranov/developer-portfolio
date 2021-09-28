@@ -25,7 +25,7 @@ foreach ( $sections as $index => $section ) {
 	 * Remove '_type' element from the array so in the section template we
 	 * can easily detect if all of the fields are empty
 	 */
-	unset( $section_type );
+	unset( $section['_type'] );
 
 	/**
 	 * Remove empty fields from array so we can check if there are any filled fields
