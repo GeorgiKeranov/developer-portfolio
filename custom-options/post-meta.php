@@ -69,7 +69,8 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 						Field::make( 'text', 'percentage', __( 'Percentage', 'gk' ) )
 							->set_help_text( __( 'Percentage must be number from 0 to 100', 'gk' ) )
 							->set_required( true )
-					) ),
+					) )
+					->set_header_template( '<%- name %>' ),
 				Field::make( 'text', 'btn_label', __( 'Button Label', 'gk' ) )
 					->set_width( 40 ),
 				Field::make( 'text', 'btn_link', __( 'Button Label', 'gk' ) )
@@ -104,6 +105,27 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 						'yes' => __( 'Yes', 'gk' ),
 					) )
 					->set_width( 20 ),
+			) )
+
+			/**
+			 * Section Skills
+			 */
+			->add_fields( 'section-skills', __( 'Section Skills', 'gk' ), array(
+				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+				Field::make( 'text', 'description', __( 'Description', 'gk' ) ),
+				Field::make( 'complex', 'skills', __( 'Skills', 'gk' ) )
+					->set_width( 50 )
+					->set_layout( 'tabbed-vertical' )
+					->add_fields( array(
+						Field::make( 'image', 'icon', __( 'Icon', 'gk' ) )
+							->set_required( true ),
+						Field::make( 'text', 'name', __( 'Name', 'gk' ) )
+							->set_required( true ),
+						Field::make( 'text', 'percentage', __( 'Percentage', 'gk' ) )
+							->set_help_text( __( 'Percentage must be number from 0 to 100', 'gk' ) )
+							->set_required( true )
+					) )
+					->set_header_template( '<%- name %>' ),
 			) )
 	) );
 
