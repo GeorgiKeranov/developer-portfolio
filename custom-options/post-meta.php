@@ -22,6 +22,16 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 			) )
 
 			/**
+			 * Section Intro Simple
+			 */
+			->add_fields( 'section-intro-simple', __( 'Section Intro Simple', 'gk' ), array(
+				Field::make( 'image', 'background_image', __( 'Background Image', 'gk' ) ),
+				Field::make( 'text', 'title', __( 'Title', 'crb' ) ),
+				Field::make( 'textarea', 'description', __( 'Description', 'crb' ) )
+					->set_rows( 4 ),
+			) )			
+
+			/**
 			 * Section Text
 			 */
 			->add_fields( 'section-text', __( 'Section Text', 'gk' ), array(
@@ -126,6 +136,22 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 							->set_required( true )
 					) )
 					->set_header_template( '<%- name %>' ),
+			) )
+
+			/**
+			 * Section Words With Images
+			 */
+			->add_fields( 'section-words-with-gallery', __( 'Section Words with Gallery', 'gk' ), array(
+				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+				Field::make( 'text', 'description', __( 'Description', 'gk' ) ),
+				Field::make( 'complex', 'words', __( 'Words', 'gk' ) )
+					->set_layout( 'tabbed-horizontal' )
+					->add_fields( array(
+						Field::make( 'text', 'word', __( 'Word', 'gk' ) )
+							->set_required( true )
+					) )
+					->set_header_template( '<%- word %>' ),
+				Field::make( 'media_gallery', 'gallery', __( 'Gallery', 'gk' ) )
 			) )
 	) );
 
