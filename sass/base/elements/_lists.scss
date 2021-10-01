@@ -1,6 +1,7 @@
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
+	padding: 0;
 }
 
 ul {
@@ -23,4 +24,11 @@ dt {
 
 dd {
 	margin: 0 1.5em 1.5em;
+}
+
+@include breakpoint(mobile) {
+	ul,
+	ol {
+		font-size: 15px;
+	}
 }
