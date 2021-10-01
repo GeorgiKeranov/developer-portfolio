@@ -13,18 +13,9 @@ if ( $is_count_of_skills_odd_number ) {
 }
 
 function gk_render_section_skill($skill, $index) {
-	$skill_icon_url = wp_get_attachment_image_url( $skill['icon'] );
+	$skill_icon_url = wp_get_attachment_image_url( $skill['icon'] ); ?>
 
-	if ( $index < 4 ) {
-		$degree = 260 + ($index * 26);
-	} else {
-		$degree = ($index - 4) * 26;
-	}
-
-	$style = 'transform: rotate(' . $degree . 'deg) translate(205px) rotate(-' . $degree . 'deg)';
-	?>
-
-	<div class="section__skill<?php echo $index === 0 ? ' section__skill--active' : '' ?>" style="<?php echo $style ?>">
+	<div class="section__skill<?php echo $index === 0 ? ' section__skill--active' : '' ?>">
 		<a href="#" data-percentage="<?php echo esc_html( $skill['percentage'] ) ?>%" data-name="<?php echo esc_html( $skill['name'] ) ?>">
 			<span style="background-image: url(<?php echo $skill_icon_url ?>)"></span>
 		</a>

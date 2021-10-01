@@ -28,7 +28,7 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		z-index: 10;
+		z-index: 10;		
 	}
 
 	.section__skill {
@@ -67,6 +67,24 @@
 	
 				span {
 					filter: grayscale(0);
+				}
+			}
+		}
+
+		@for $i from 1 through 14 {
+			$rotate_degree: 0;
+
+			@if $i <= 4 {
+				$rotate_degree: 260 + (($i - 1) * 26);
+			} @else {
+				$rotate_degree: ($i - 5) * 26;
+			}
+
+			&:nth-child(#{$i}) {
+				transform: rotate(#{$rotate_degree}deg) translate(205px) rotate(-#{$rotate_degree}deg);
+
+				@include breakpoint(mobile-portrait) {
+					transform: rotate(#{$rotate_degree}deg) translate(150px) rotate(-#{$rotate_degree}deg);
 				}
 			}
 		}
