@@ -67,4 +67,32 @@
 			margin-bottom: 20px;
 		}
 	}
+
+	@include breakpoint(mobile-portrait) {
+		.section__words {
+			li {
+				padding: 4px 8px;
+				margin: 0 4px 10px;
+			}
+
+			p {
+				font-size: 15px;
+			}
+		}
+
+		.section__galery {
+			margin: 0 -5px;
+		}
+
+		.section__image {
+			padding: 0 5px;
+			margin-bottom: 10px;
+		}
+	}
+
+	@include breakpoint(mobile-small) {
+		.section__image {
+			width: 100%;
+		}
+	}
 }
