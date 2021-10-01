@@ -31,7 +31,7 @@ if ( empty( $args['projects'] ) ) {
 		<div class="section__project">
 			<div class="section__project-background<?php echo $class ?>"<?php echo $background_style ?>>
 				<div class="section__project-content">
-					<?php if ( !empty( $logo_url ) ) : ?>
+					<?php if ( !empty( $logo_style ) ) : ?>
 						<div class="section__image-logo"<?php echo $logo_style ?>></div>
 					<?php else : ?>
 						<div class="section__title">

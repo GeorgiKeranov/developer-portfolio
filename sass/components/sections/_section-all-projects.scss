@@ -1,0 +1,12 @@
+.section-all-projects {
+	padding: 50px 0 30px;
+	text-align: center;
+
+	h1 {
+		color: $color-dark-blue-2;
+	}
+
+	@include breakpoint(mobile) {
+		padding: 30px 0 20px;
+	}
+}
