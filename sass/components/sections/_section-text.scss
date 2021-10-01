@@ -2,13 +2,8 @@
 	padding: 50px 0;
 
 	p {
-		color: $color-gray;
 		font-size: 24px;
 		margin-bottom: 20px;
-
-		strong {
-			color: $color-gray-bold;
-		}
 
 		a {
 			position: relative;
@@ -47,5 +42,37 @@
 		p {
 			font-size: 17px;
 		}	
+	}
+}
+
+.section-text--image-background {
+	position: relative;
+	padding: 100px 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: $color-white;
+
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.75);
+		z-index: 1;
+	}
+
+	.container {
+		position: relative;
+		z-index: 10;
+	}
+
+	p {
+		a {
+			color: $color-light-blue;
+		}
 	}
 }
