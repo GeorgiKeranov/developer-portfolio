@@ -101,7 +101,7 @@
 				}
 
 				@include breakpoint(mobile-portrait) {
-					transform: rotate(#{$rotate_degree}deg) translate(150px);
+					transform: rotate(#{$rotate_degree}deg) translate(132px);
 
 					a {
 						transform: rotate(-#{$rotate_degree}deg);
@@ -184,6 +184,29 @@
 		h3 {
 			font-size: 32px;
 			margin-bottom: 0;
+		}
+	}
+
+	@include breakpoint(mobile-small) {
+		.section__body {
+			width: 200px;
+			height: 200px;
+		}
+
+		.section__skill {
+			&:before {
+				width: 10px;
+			}
+		}
+
+		.section__text {
+			h2 {
+				font-size: 30px;
+			}
+
+			h3 {
+				font-size: 18px;
+			}
 		}
 	}
 }
