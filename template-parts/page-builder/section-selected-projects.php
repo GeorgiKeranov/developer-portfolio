@@ -7,7 +7,14 @@
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['projects'] ) ) {
-			get_template_part( 'template-parts/section-projects', null, array( 'projects' => $args['projects'] ) );
+			$projects= $args['projects'];
+
+			$project_ids = array();
+			foreach ( $projects as $project ) {
+				$project_ids[] = $project['id'];
+			}
+
+			get_template_part( 'template-parts/section-projects', null, array( 'projects' => $project_ids ) );
 		} ?>
 
 		<div class="section__action">

@@ -5,8 +5,7 @@ if ( empty( $args['projects'] ) ) {
 ?>
 
 <div class="section-projects">
-	<?php foreach ( $args['projects'] as $project ) :
-		$id = $project['id'];
+	<?php foreach ( $args['projects'] as $id ) :
 		$permalink = get_the_permalink( $id );
 		$title = get_the_title( $id );
 
