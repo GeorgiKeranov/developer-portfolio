@@ -8,17 +8,20 @@ if ( empty( $args['projects'] ) ) {
 	<?php foreach ( $args['projects'] as $id ) :
 		$permalink = get_the_permalink( $id );
 		$title = get_the_title( $id );
+		$class = '';
 
-		$image_url = '';
+		$background_style = '';
 		$thumbnail_id = get_post_thumbnail_id( $id );
 		if ( !empty( $thumbnail_id ) ) {
-			$image_url = wp_get_attachment_image_url( $thumbnail_id, 'medium_large' );
+			$background_style = ' style="background-image:url(' . wp_get_attachment_image_url( $thumbnail_id, 'medium_large' ) . ')"';
+		} else {
+			$class = ' section__project-background--empty';
 		}
 
-		$logo_url = '';
+		$logo_style = '';
 		$logo_id = carbon_get_post_meta( $id, 'gk_logo' );
 		if ( !empty( $logo_id ) ) {
-			$logo_url = wp_get_attachment_image_url( $logo_id, 'medium' );
+			$logo_style = ' style="background-image:url(' . wp_get_attachment_image_url( $logo_id, 'medium' ) . ')"';
 		}
 
 		$main_technologies = carbon_get_post_meta( $id, 'gk_main_technologies' );
@@ -26,10 +29,10 @@ if ( empty( $args['projects'] ) ) {
 		?>
 		
 		<div class="section__project">
-			<div class="section__project-background" style="background-image:url(<?php echo $image_url ?>)">
+			<div class="section__project-background<?php echo $class ?>"<?php echo $background_style ?>>
 				<div class="section__project-content">
 					<?php if ( !empty( $logo_url ) ) : ?>
-						<div class="section__image-logo" style="background-image:url(<?php echo $logo_url ?>)"></div>
+						<div class="section__image-logo"<?php echo $logo_style ?>></div>
 					<?php else : ?>
 						<div class="section__title">
 							<h2><?php echo esc_html( $title ) ?></h2>

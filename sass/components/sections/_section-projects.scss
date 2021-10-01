@@ -13,8 +13,8 @@
 		position: relative;
 		padding-top: 55%;
 		min-height: 300px;
-		background-size: cover;
-		background-position: top center;
+		background-size: contain;
+		background-position: center;
 		background-repeat: no-repeat;
 		background-color: #000;
 		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
@@ -54,6 +54,14 @@
 		}
 	}
 
+	.section__project-background--empty {
+		&:hover {
+			.section__project-content {
+				opacity: .4;
+			}
+		}
+	}
+
 	.section__project-content {
 		position: absolute;
 		top: 0;
@@ -80,6 +88,7 @@
 	.section__title {
 		h2 {
 			color: $color-light-blue;
+			text-align: center;
 		}
 	}
 
