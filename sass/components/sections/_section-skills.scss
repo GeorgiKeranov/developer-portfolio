@@ -40,6 +40,19 @@
 		margin-top: -22px;
 		margin-left: -22px;
 
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 15px;
+			height: 4px;
+			background-color: $color-light-gray-2;
+			top: 50%;
+			right: 100%;
+			transform: translateY(-50%);
+			transition: background-color .3s;
+		}
+
 		a {
 			display: inline-block;
 			width: 100%;
@@ -81,16 +94,28 @@
 			}
 
 			&:nth-child(#{$i}) {
-				transform: rotate(#{$rotate_degree}deg) translate(205px) rotate(-#{$rotate_degree}deg);
+				transform: rotate(#{$rotate_degree}deg) translate(205px);
+
+				a {
+					transform: rotate(-#{$rotate_degree}deg);
+				}
 
 				@include breakpoint(mobile-portrait) {
-					transform: rotate(#{$rotate_degree}deg) translate(150px) rotate(-#{$rotate_degree}deg);
+					transform: rotate(#{$rotate_degree}deg) translate(150px);
+
+					a {
+						transform: rotate(-#{$rotate_degree}deg);
+					}
 				}
 			}
 		}
 	}
 
 	.section__skill--active {
+		&:before {
+			background-color: $color-blue;			
+		}
+
 		a {
 			background-color: transparent;
 			border-color: $color-blue;
