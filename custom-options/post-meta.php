@@ -151,6 +151,19 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 					->set_header_template( '<%- word %>' ),
 				Field::make( 'media_gallery', 'gallery', __( 'Gallery', 'gk' ) )
 			) )
+
+			/**
+			 * Section Contact
+			 */
+			->add_fields( 'section-contact', __( 'Section Contact', 'gk' ), array(
+				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+				Field::make( 'textarea', 'description', __( 'Description', 'gk' ) )
+					->set_rows( 3 ),
+				Field::make( 'text', 'location', __( 'Location', 'gk' ) ),
+				Field::make( 'text', 'email', __( 'Email', 'gk' ) ),
+				Field::make( 'text', 'phone', __( 'Phone', 'gk' ) ),
+				Field::make( 'text', 'form_shortcode', __( 'Form Shortcode', 'gk' ) ),
+			) )
 	) );
 
 /**
