@@ -100,7 +100,7 @@
 					transform: rotate(-#{$rotate_degree}deg);
 				}
 
-				@include breakpoint(mobile-portrait) {
+				@include breakpoint(mobile-small) {
 					transform: rotate(#{$rotate_degree}deg) translate(132px);
 
 					a {
