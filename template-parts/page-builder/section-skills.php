@@ -12,11 +12,19 @@ if ( $is_count_of_skills_odd_number ) {
 	$split_skills_on_index += 1;
 }
 
-function gk_render_section_skill($skill, $is_active = false) {
+function gk_render_section_skill($skill, $index) {
 	$skill_icon_url = wp_get_attachment_image_url( $skill['icon'] );
+
+	if ( $index < 4 ) {
+		$degree = 260 + ($index * 26);
+	} else {
+		$degree = ($index - 4) * 26;
+	}
+
+	$style = 'transform: rotate(' . $degree . 'deg) translate(205px) rotate(-' . $degree . 'deg)';
 	?>
 
-	<div class="section__skill<?php echo $is_active ? ' section__skill--active' : '' ?>">
+	<div class="section__skill<?php echo $index === 0 ? ' section__skill--active' : '' ?>" style="<?php echo $style ?>">
 		<a href="#" data-percentage="<?php echo esc_html( $skill['percentage'] ) ?>%" data-name="<?php echo esc_html( $skill['name'] ) ?>">
 			<span style="background-image: url(<?php echo $skill_icon_url ?>)"></span>
 		</a>
@@ -36,11 +44,11 @@ function gk_render_section_skill($skill, $is_active = false) {
 		</div><!-- /.section__head -->
 
 		<div class="section__body">
-			<div class="section__skills-left">
-				<?php for ( $index = 0; $index < $split_skills_on_index; $index++ ) {
-					gk_render_section_skill( $skills[$index], $index === 0 );
+			<div class="section__skills">
+				<?php foreach ( $skills as $index => $skill ) {
+					gk_render_section_skill( $skill, $index );
 				} ?>
-			</div><!-- /.section__skills-left -->
+			</div><!-- /.section__skills -->
 			
 			<div class="section__skill-selected">
 				<div class="section__circle">
@@ -55,12 +63,6 @@ function gk_render_section_skill($skill, $is_active = false) {
 					</div><!-- /.section__text -->
 				</div><!-- /.section__circle -->
 			</div><!-- /.section__skill-selected -->
-
-			<div class="section__skills-right">
-				<?php for ( $index = $split_skills_on_index; $index < $count_of_skills; $index++ ) {
-					gk_render_section_skill( $skills[$index] );
-				} ?>
-			</div><!-- /.section__skills-right -->
 		</div><!-- /.section__body -->
 	</div><!-- /.container -->
 </div><!-- /.section-skills -->

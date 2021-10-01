@@ -1,5 +1,5 @@
 .section-skills {
-	padding: 50px 0;
+	padding: 50px 0 100px;
 	text-align: center;
 
 	.container {
@@ -7,6 +7,8 @@
 	}
 
 	.section__head {
+		margin-bottom: 80px;
+
 		h2 {
 			color: $color-blue;
 			margin-bottom: 0;
@@ -14,27 +16,37 @@
 	}
 
 	.section__body {
-		display: flex;
+		position: relative;
+		width: 336px;
+		height: 336px;
+		margin: 0 auto;
 	}
 
-	.section__skills-left,
-	.section__skills-right {
-		width: 20%;
-	}
-
-	.section__skill-selected {
-		width: 80%;
+	.section__skills {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 10;
 	}
 
 	.section__skill {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 44px;
+		height: 44px;
+		margin-top: -22px;
+		margin-left: -22px;
+
 		a {
 			display: inline-block;
-			width: 44px;
-			height: 44px;
+			width: 100%;
+			height: 100%;
 			background-color: $color-light-gray-2;
 			overflow: hidden;
 			border-radius: 50%;
-			margin-bottom: 5px;
 			padding-top: 4px;
 			border: 2px solid transparent;
 			transition: background-color .3s, border-color .3s;
@@ -72,10 +84,16 @@
 		}
 	}
 
+	.section__skill-selected {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+	}
+
 	.section__circle {
 		position: relative;
 		width: 100%;
-		padding-top: 100%;
+		height: 100%;
 		background-color: $color-sky-blue;
 		border-radius: 50%;
 		border: 4px solid $color-blue-transparent;
@@ -115,13 +133,13 @@
 		z-index: 20;
 
 		h2 {
-			font-size: 60px;
+			font-size: 47px;
 			font-weight: 400;
 			margin-bottom: 0;
 		}
 
 		h3 {
-			font-size: 37px;
+			font-size: 32px;
 			margin-bottom: 0;
 		}
 	}
