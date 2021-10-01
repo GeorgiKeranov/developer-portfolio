@@ -1,6 +1,10 @@
 .section-text {
 	padding: 50px 0;
 
+	.container > *:last-child {
+		margin-bottom: 0;
+	}
+
 	p {
 		font-size: 24px;
 		margin-bottom: 20px;
@@ -78,5 +82,9 @@
 
 	@include breakpoint(desktop-small) {
 		padding: 50px 0;
+	}
+
+	@include breakpoint(mobile) {
+		padding: 20px 0;
 	}
 }
