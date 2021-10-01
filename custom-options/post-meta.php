@@ -85,6 +85,13 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 			) )
 
 			/**
+			 * Section All Projects
+			 */
+			->add_fields( 'section-all-projects', __( 'Section All Projects', 'gk' ), array(
+				Field::make( 'text', 'title', __( 'Title', 'gk' ) ),
+			) )
+
+			/**
 			 * Section Selected Projects
 			 */
 			->add_fields( 'section-selected-projects', __( 'Section Selected Projects', 'gk' ), array(
