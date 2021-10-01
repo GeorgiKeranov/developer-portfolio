@@ -104,4 +104,14 @@
 	ul {
 		margin-bottom: 10px;
 	}
+
+	@include breakpoint(tablet-portrait) {
+		.section__tabs {
+			width: 30%;
+		}
+
+		.section__tabs-content {
+			width: 70%;
+		}
+	}
 }
