@@ -19,22 +19,13 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 					->set_width( 70 ),
 				Field::make( 'image', 'image', __( 'Image', 'gk' ) )
 					->set_width( 30 )
-			) )
-
-			/**
-			 * Section Intro Simple
-			 */
-			->add_fields( 'section-intro-simple', __( 'Section Intro Simple', 'gk' ), array(
-				Field::make( 'image', 'background_image', __( 'Background Image', 'gk' ) ),
-				Field::make( 'text', 'title', __( 'Title', 'crb' ) ),
-				Field::make( 'textarea', 'description', __( 'Description', 'crb' ) )
-					->set_rows( 4 ),
-			) )			
+			) )	
 
 			/**
 			 * Section Text
 			 */
 			->add_fields( 'section-text', __( 'Section Text', 'gk' ), array(
+				Field::make( 'image', 'background_image', __( 'Image', 'gk' ) ),
 				Field::make( 'rich_text', 'text', __( 'Text', 'gk' ) )
 			) )
 
