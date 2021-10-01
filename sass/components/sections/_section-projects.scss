@@ -140,6 +140,12 @@
 		margin-top: 30px;
 	}
 
+	@include breakpoint(mobile) {
+		p {
+			font-size: 14px;
+		}
+	}
+
 	@include breakpoint(mobile-portrait) {
 		.section__project {
 			width: 100%;
