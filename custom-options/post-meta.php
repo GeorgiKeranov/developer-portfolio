@@ -162,6 +162,7 @@ Container::make( 'post_meta', __( 'Page Builder', 'gk' ) )
 				Field::make( 'text', 'location', __( 'Location', 'gk' ) ),
 				Field::make( 'text', 'email', __( 'Email', 'gk' ) ),
 				Field::make( 'text', 'phone', __( 'Phone', 'gk' ) ),
+				Field::make( 'text', 'form_title', __( 'Form Title', 'gk' ) ),
 				Field::make( 'text', 'form_shortcode', __( 'Form Shortcode', 'gk' ) ),
 			) )
 	) );
