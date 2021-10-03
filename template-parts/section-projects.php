@@ -44,15 +44,7 @@ if ( empty( $args['projects'] ) ) {
 							<?php echo wpautop( $excerpt ) ?>
 						</div><!-- /.section__excerpt -->
 
-						<?php if ( !empty( $main_technologies ) ) : ?>
-							<ul class="section__technologies">
-								<?php foreach ( $main_technologies as $technology ) : ?>
-									<li>
-										<p><?php echo esc_html( $technology['technology'] ) ?></p>
-									</li>
-								<?php endforeach; ?>
-							</ul>
-						<?php endif; ?>
+						<?php echo get_template_part( 'template-parts/section-technologies', null, array( 'technologies' => $main_technologies ) ); ?>
 					</div><!-- /.section__details -->
 
 					<a href="<?php echo $permalink ?>"></a>
