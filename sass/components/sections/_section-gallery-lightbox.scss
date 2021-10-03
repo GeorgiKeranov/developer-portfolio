@@ -22,16 +22,14 @@
 	}
 
 	.section__preview-image-prev,
-	.section__preview-image-next {
+	.section__preview-image-next,
+	.section__preview-image-fullscreen {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
 		display: inline-block;
-		padding: 3px;
 		width: 32px;
 		height: 32px;
-		background-color: $color-black;
-		border: 1px solid $color-black;
+		background-color: $color-dark-blue;
+		border: 1px solid $color-dark-blue;
 		border-radius: 10px;
 		z-index: 10;
 		transition: background-color .3s;
@@ -45,9 +43,16 @@
 			background-color: $color-white;
 
 			svg {
-				fill: $color-black;
+				fill: $color-dark-blue-2;
 			}
 		}
+	}
+
+	.section__preview-image-prev,
+	.section__preview-image-next {
+		padding: 3px;
+		top: 50%;
+		transform: translateY(-50%);
 	}
 
 	.section__preview-image-prev {
@@ -56,6 +61,12 @@
 
 	.section__preview-image-next {
 		right: 15px;
+	}
+
+	.section__preview-image-fullscreen {
+		bottom: 15px;
+		right: 15px;
+		padding: 5px;
 	}
 
 	.section__small-images {
@@ -88,5 +99,101 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-color: $color-white;
+	}
+
+	.section__gallery-zoom {
+		display: none;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 50px;
+		background-color: rgba(0, 0, 0, .8);
+		text-align: center;
+		white-space: nowrap;
+		z-index: 999999;
+	}
+
+	.section__gallery-zoom--active {
+		display: block;
+	}
+
+	.zoom__close-on-click {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.zoom__image-center {
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+	.zoom__image {
+		position: relative;
+		display: inline-block;
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+		margin: 0 auto;
+		vertical-align: middle;
+		z-index: 10;
+	}
+
+	.zoom__control-prev,
+	.zoom__control-next {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: inline-block;
+		padding: 12px;
+		width: 50px;
+		height: 50px;
+		background-color: $color-white;
+		border: 1px solid $color-white;
+		border-radius: 10px;
+		transition: background-color .3s;
+		z-index: 20;
+
+		svg {
+			fill: $color-dark-blue;
+			transition: fill .3s;
+		}
+
+		&:hover {
+			background-color: $color-dark-blue;
+
+			svg {
+				fill: $color-white;
+			}
+		}
+	}
+
+	.zoom__control-prev {
+		left: 30px;
+	}
+
+	.zoom__control-next {
+		right: 30px;
+	}
+
+	.zoom__control-close {
+		position: absolute;
+		right: 30px;
+		top: 15px;
+		color: $color-white;
+		font-weight: 700;
+		font-size: 40px;
+		line-height: 1;
+		transition: opacity .3s;
+
+		&:hover {
+			opacity: .4;
+		}
 	}
 }
