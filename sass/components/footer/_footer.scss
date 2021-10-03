@@ -14,7 +14,7 @@
 		right: -20px;
 		display: block;
 		height: 105px;
-		transform: rotate(177deg);
+		transform: rotate(-3deg);
 		background-color: $color-blue;
 	}
 
@@ -112,5 +112,14 @@
 				font-size: 21px;
 			}
 		}
+	}
+}
+
+.footer--contact {
+	background-color: $color-blue;
+	padding-top: 117px;
+
+	&:before {
+		border-top: 15px solid $color-white;
 	}
 }

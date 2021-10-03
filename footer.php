@@ -13,21 +13,24 @@
 	</main><!-- /.main -->
 
 	<?php
-	$section_cta_fields = array(
-		'text' => carbon_get_theme_option( 'gk_cta_text' ),
-		'btn_label' => carbon_get_theme_option( 'gk_cta_btn_label' ),
-		'btn_link' => carbon_get_theme_option( 'gk_cta_btn_link' ),
-		'btn_new_tab' => carbon_get_theme_option( 'gk_cta_btn_new_tab' ),
-	);
+	$is_contact_page = is_page('contact');
 
-	get_template_part( 'template-parts/section-cta', null, $section_cta_fields );
+	if ( !$is_contact_page ) {
+		$section_cta_fields = array(
+			'text' => carbon_get_theme_option( 'gk_cta_text' ),
+			'btn_label' => carbon_get_theme_option( 'gk_cta_btn_label' ),
+			'btn_link' => carbon_get_theme_option( 'gk_cta_btn_link' ),
+			'btn_new_tab' => carbon_get_theme_option( 'gk_cta_btn_new_tab' ),
+		);
 
+		get_template_part( 'template-parts/section-cta', null, $section_cta_fields );
+	}
 
 	$footer_text = carbon_get_theme_option( 'gk_footer_text' );
 	$footer_copyright = carbon_get_theme_option( 'gk_footer_copyright' );
 	?>
 
-	<footer class="footer">
+	<footer class="footer<?php echo $is_contact_page ? ' footer--contact' : '' ?>">
 		<div class="footer__content">
 			<?php if ( !empty( $footer_text ) ) : ?>
 				<div class="footer__quote">
