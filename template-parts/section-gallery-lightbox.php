@@ -13,7 +13,7 @@ $first_image_large_url = wp_get_attachment_image_url( $first_image_id, 'large' )
 	<div class="section__preview-image">
 		<a href="#" class="section__preview-image-prev"><?php echo gk_get_svg('icon-arrow-left') ?></a>
 
-		<a href="#" class="section__preview-image-background" data-image-selected="1" style="background-image: url(<?php echo $first_image_large_url ?>)"></a>
+		<a href="#" class="section__preview-image-background" data-image-selected="0" style="background-image: url(<?php echo $first_image_large_url ?>)"></a>
 
 		<a href="#" class="section__preview-image-next"><?php echo gk_get_svg('icon-arrow-right') ?></a>
 	</div><!-- /.section__preview-image -->
