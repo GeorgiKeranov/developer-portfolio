@@ -97,9 +97,3 @@ h6 {
 		font-size: 8px;
 	}
 }
-
-@include breakpoint(mobile-small) {
-	h1 {
-		font-size: 24px;
-	}
-}
