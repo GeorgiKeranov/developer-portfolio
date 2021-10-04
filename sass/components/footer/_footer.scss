@@ -1,34 +1,18 @@
 .footer {
 	overflow: hidden;
-	position: relative;	
-	padding-top: 105px;
+	position: relative;
+	margin-top: auto;
 	text-align: center;
 	color: $color-white;
-	background-color: $color-dark-blue;
-	
-	&:before {
-		content: '';
-		position: absolute;
-		top: 52px;
-		left: -20px;
-		right: -20px;
-		display: block;
-		height: 105px;
-		transform: rotate(-3deg);
-		background-color: $color-blue;
-	}
+	border-top: 5px solid $color-light-blue;
 
 	.footer__content {
-		position: relative;
-		z-index: 10;
-		padding: 20px 15px;
-		background-color: $color-blue;
+		padding: 30px 15px;
+		background-color: $color-dark-blue;
 	}
 
 	.footer__quote {
-		padding-bottom: 20px;
 		margin-bottom: 20px;
-		border-bottom: 2px solid #fff;
 
 		blockquote {
 			font-size: 40px;
@@ -38,6 +22,10 @@
 			p {
 				margin-bottom: 0;
 				font-size: inherit;
+			}
+
+			strong {
+				color: $color-light-blue;
 			}
 		}
 	}
@@ -52,11 +40,13 @@
 
 	.footer__copyright {
 		padding: 10px 0;
-		background-color: $color-dark-blue;
+		background-color: $color-light-blue;
 
 		p {
 			margin: 0;
-			color: #ddd;
+			color: $color-dark-blue;
+			font-weight: 700;
+			opacity: .8;
 		}
 	}
 
@@ -98,28 +88,11 @@
 		}
 	}
 
-	@include breakpoint(mobile-portrait) {
-		padding-top: 70px;
-
-		&:before {
-			top: 50px;
-		}
-	}
-
 	@include breakpoint(mobile-small) {
 		.footer__quote {
 			blockquote {
 				font-size: 21px;
 			}
 		}
-	}
-}
-
-.footer--contact {
-	background-color: $color-blue;
-	padding-top: 117px;
-
-	&:before {
-		border-top: 15px solid $color-white;
 	}
 }
