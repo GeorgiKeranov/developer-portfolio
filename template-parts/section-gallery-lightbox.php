@@ -36,9 +36,9 @@ $first_image_large_url = wp_get_attachment_image_url( $first_image_id, 'large' )
 	<div class="section__gallery-zoom">
 		<div class="zoom__close-on-click"></div>
 
-		<span class="zoom__image-center"></span>
-
 		<img class="zoom__image"/>
+
+		<span class="zoom__image-center"></span>
 
 		<div class="zoom__controls">
 			<a href="#" class="zoom__control-prev"><?php echo gk_get_svg('icon-arrow-left') ?></a>

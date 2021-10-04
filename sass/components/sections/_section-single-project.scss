@@ -13,7 +13,7 @@
 	}
 
 	.section__details {
-		width: 45%;
+		width: 47%;
 	}
 
 	.section__text {
@@ -78,6 +78,43 @@
 					fill: $color-light-blue;
 				}
 			}
+		}
+	}
+
+	@include breakpoint(mobile) {
+		padding: 20px 0;
+
+		h1 {
+			text-align: center;
+		}
+
+		.section__flex {
+			flex-wrap: wrap;
+		}
+
+		.section__gallery {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.section__details {
+			width: 100%;
+			overflow: hidden;
+		}
+
+		.section__technologies {
+			.section-technologies {
+				justify-content: center;
+			}
+		}
+
+		.section__socials {
+			justify-content: center;
+			margin: 0 -5px;
+		}
+
+		.section__image-with-text {
+			margin: 0 5px;
 		}
 	}
 }
