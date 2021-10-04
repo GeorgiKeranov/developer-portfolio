@@ -1,4 +1,4 @@
-<div class="section-contact">
+<div id="section-contact-<?php echo $args['index'] ?>" class="section-contact">
 	<div class="container">
 		<div class="section__head">
 			<?php if ( !empty( $args['title'] ) ) : ?>
