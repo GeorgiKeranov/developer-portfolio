@@ -50,7 +50,7 @@
 				<?php endif;
 
 				if ( !empty( $linkedin ) ) : ?>
-					<div class="section__icon-with-text">
+					<div class="section__icon-with-text section__icon-with-text--linkedin">
 						<a href="<?php echo esc_url( $linkedin ) ?>" target="_blank"><?php echo gk_get_svg('logo-linkedin') ?> LinkedIn</a>
 					</div><!-- /.section__icon-with-text  -->
 				<?php endif; ?>
