@@ -1,7 +1,7 @@
 .section-projects {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0 -12px;
+	margin: 0 -12px 20px;
 
 	.section__project {
 		width: 50%;
@@ -16,7 +16,7 @@
 		background-size: contain;
 		background-position: center;
 		background-repeat: no-repeat;
-		background-color: #000;
+		background-color: $color-dark-blue;
 		box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08);
 		overflow: hidden;
 
@@ -44,7 +44,7 @@
 			bottom: 0;
 			left: 0;
 			right: 0;
-			background-color: $color-black;
+			background-color: $color-dark-blue;
 			opacity: .85;
 			transition: opacity .3s;
 		}
@@ -89,6 +89,7 @@
 		h2 {
 			color: $color-light-blue;
 			text-align: center;
+			margin-bottom: 0;
 		}
 	}
 
@@ -101,15 +102,6 @@
 		h4 {
 			color: $color-dark-blue-2;
 			margin-bottom: 5px;
-
-			a {
-				color: inherit;
-				transition: color .3s;
-
-				&:hover {
-					color: $color-blue;
-				}
-			}
 		}
 	}
 

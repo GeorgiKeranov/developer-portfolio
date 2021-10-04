@@ -2,9 +2,9 @@
 	display: inline-block;
 	padding: 10px 30px;
 	text-decoration: none;
-	background-color: $color-blue;
+	background-color: $color-dark-blue-2;
 	color: $color-white;
-	border: 2px solid $color-blue;
+	border: 2px solid $color-dark-blue-2;
 	transition: color .3s, background-color .3s;
 	font-size: 22px;
 	font-weight: 700;
@@ -13,7 +13,7 @@
 
 	&:hover {
 		background-color: $color-white;
-		color: $color-blue;
+		color: $color-dark-blue-2;
 	}
 
 	@include breakpoint(desktop-small) {
@@ -29,22 +29,11 @@
 
 .btn--light-blue {
 	border-color: $color-light-blue;
-	background-color: $color-dark-blue;
-	color: $color-light-blue;
+	background-color: $color-light-blue;
+	color: $color-dark-blue;
 
 	&:hover {
-		background-color: $color-light-blue;
-		color: $color-dark-blue;
+		background-color: $color-dark-blue;
+		color: $color-light-blue;
 	}
-}
-
-.btn--dark-blue {
-	border-color: $color-dark-blue-2;
-	background-color: $color-dark-blue-2;
-	color: $color-white;
-
-	&:hover {
-		background-color: $color-white;
-		color: $color-dark-blue-2;
-	}	
 }

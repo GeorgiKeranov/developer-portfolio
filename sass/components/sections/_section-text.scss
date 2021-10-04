@@ -1,5 +1,7 @@
 .section-text {
 	padding: 50px 0;
+	background-color: $color-light-gray;
+	color: $color-dark-blue-2;
 
 	.container > *:last-child {
 		margin-bottom: 0;
@@ -11,11 +13,11 @@
 
 		a {
 			position: relative;
-			color: $color-blue;
+			color: $color-dark-blue-2;
 			transition: opacity .3s;
 
 			strong {
-				color: $color-blue;
+				color: $color-dark-blue-2;
 			}
 
 			&:hover {
