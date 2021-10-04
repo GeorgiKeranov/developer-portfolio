@@ -18,7 +18,7 @@
 		} ?>
 
 		<div class="section__action">
-			<?php gk_render_button( $args['btn_label'], $args['btn_link'], $args['btn_new_tab'], 'btn btn--dark-blue' ) ?>
+			<?php gk_render_button( $args['btn_label'], $args['btn_link'], $args['btn_new_tab'], 'btn' ) ?>
 		</div><!-- /.section__action -->
 	</div><!-- /.container -->
 </div><!-- /.section-selected-projects -->
