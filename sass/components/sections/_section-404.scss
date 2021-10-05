@@ -1,0 +1,51 @@
+.section-404 {
+	margin: 0 auto;
+	padding: 100px 0;
+	text-align: center;
+	max-width: 800px;
+	color: $color-white;
+
+	h1 {
+		font-size: 160px;
+		line-height: 0.69;
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 33px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+
+	@include breakpoint(tablet-portrait) {
+		padding: 50px 0;
+
+		h1 {
+			font-size: 130px;
+		}
+
+		h2 {
+			font-size: 28px;
+		}
+	}
+
+	@include breakpoint(mobile) {
+
+		h1 {
+			font-size: 100px;
+			margin-bottom: 35px;
+		}
+
+		h2 {
+			font-size: 25px;
+		}
+
+		p {
+			font-size: 18px;
+		}
+	}
+}
