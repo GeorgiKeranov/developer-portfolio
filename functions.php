@@ -163,10 +163,6 @@ function gk_scripts() {
 	wp_localize_script( 'gk-script', 'globalVariables', array(
 		'siteUrl' => $template_directory_uri,
 	) );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'gk_scripts' );
 
@@ -205,3 +201,7 @@ require GK_THEME_DIR . '/inc/disable-classic-editor.php';
  */
 require GK_THEME_DIR . '/inc/render-button.php';
 
+/**
+ * Add customizations on admin pages
+ */
+require GK_THEME_DIR . '/inc/admin-page-customization.php';
