@@ -13,6 +13,10 @@
 	}
 
 	.section__details {
+		width: 100%;
+	}
+
+	.section__gallery + .section__details {
 		width: 47%;
 	}
 
@@ -38,6 +42,10 @@
 			&:hover {
 				opacity: .5;
 			}
+		}
+
+		strong {
+			color: $color-light-blue;
 		}
 	}
 
@@ -97,7 +105,7 @@
 			margin-bottom: 20px;
 		}
 
-		.section__details {
+		.section__gallery + .section__details {
 			width: 100%;
 			overflow: hidden;
 		}
