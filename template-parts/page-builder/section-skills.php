@@ -26,15 +26,15 @@ function gk_render_section_skill($skill, $index) {
 	<div class="container">
 		<div class="section__head">
 			<?php if ( !empty( $args['title'] ) ) : ?>
-				<h2><?php echo esc_html( $args['title'] ) ?></h2>
+				<h2 class="animation" data-animation="slide-in-left"><?php echo esc_html( $args['title'] ) ?></h2>
 			<?php endif; ?>
 
 			<?php if ( !empty( $args['description'] ) ) : ?>
-				<h4><?php echo esc_html( $args['description'] ) ?></h4>
+				<h4 class="animation" data-animation="slide-in-right" style="animation-delay: .3s"><?php echo esc_html( $args['description'] ) ?></h4>
 			<?php endif; ?>
 		</div><!-- /.section__head -->
 
-		<div class="section__body">
+		<div class="section__body animation" data-animation="pop-in" style="animation-delay: .7s">
 			<div class="section__skills">
 				<?php foreach ( $skills as $index => $skill ) {
 					gk_render_section_skill( $skill, $index );

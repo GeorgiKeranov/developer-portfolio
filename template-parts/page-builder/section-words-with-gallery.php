@@ -1,15 +1,15 @@
 <div class="section-words-with-gallery">
 	<div class="container">
 		<?php if ( !empty( $args['title'] ) ) : ?>
-			<h2><?php echo esc_html( $args['title'] ) ?></h2>
+			<h2 class="animation" data-animation="fade-in"><?php echo esc_html( $args['title'] ) ?></h2>
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['description'] ) ) : ?>
-			<h3><?php echo esc_html( $args['description'] ) ?></h3>
+			<h3 class="animation" data-animation="fade-in"><?php echo esc_html( $args['description'] ) ?></h3>
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['words'] ) ) : ?>
-			<ul class="section__words">
+			<ul class="section__words animation" data-animation="fade-in">
 				<?php foreach ( $args['words'] as $word ) : ?>
 					<li>
 						<p><?php echo esc_html( $word['word'] ) ?></p>
@@ -19,7 +19,7 @@
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['gallery'] ) ) : ?>
-			<div class="section__gallery">
+			<div class="section__gallery animation" data-animation="fade-in">
 				<?php foreach ( $args['gallery'] as $image ) :
 					$image_url = wp_get_attachment_image_url( $image, 'large' );
 

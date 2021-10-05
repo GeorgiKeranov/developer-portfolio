@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="section__flex">
 			<div class="section__left">
-				<div class="section__title">
+				<div class="section__title animation" data-animation="slide-in-left">
 					<?php if ( !empty( $args['icon_left'] ) ) :
 						$icon_left = wp_get_attachment_image_url( $args['icon_left'], 'thumbnail' ); ?>
 
@@ -14,13 +14,13 @@
 					<?php endif; ?>
 				</div>
 
-				<div class="section__text">
+				<div class="section__text animation" data-animation="slide-in-left" style="animation-delay: .3s">
 					<?php echo apply_filters( 'the_content', $args['text_left'] ); ?>
 				</div><!-- /.section__text -->
 			</div><!-- /.section__left -->
 
 			<div class="section__right">
-				<div class="section__title">
+				<div class="section__title animation" data-animation="slide-in-right">
 					<?php if ( !empty( $args['icon_right'] ) ) :
 						$icon_right = wp_get_attachment_image_url( $args['icon_right'], 'thumbnail' ); ?>
 
@@ -32,7 +32,7 @@
 					<?php endif; ?>
 				</div>
 
-				<div class="section__skills">
+				<div class="section__skills animation" data-animation="slide-in-right" style="animation-delay: .3s">
 					<?php foreach ( $args['skills'] as $skill ) :
 						if ( !is_numeric( $skill['percentage'] ) ) {
 							continue;
@@ -51,7 +51,7 @@
 			</div><!-- /.section__right -->
 		</div><!-- /.section__flex -->
 
-		<div class="section__action">
+		<div class="section__action animation" data-animation="fade-in">
 			<?php gk_render_button( $args['btn_label'], $args['btn_link'], $args['btn_new_tab'], 'btn btn--light-blue' ) ?>
 		</div><!-- /.section__action -->
 	</div><!-- /.container -->

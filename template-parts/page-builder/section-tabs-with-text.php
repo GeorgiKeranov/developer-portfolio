@@ -1,14 +1,14 @@
 <div class="section-tabs-with-text">
 	<div class="container">
 		<?php if ( !empty( $args['title'] ) ) : ?>
-			<div class="section__title">
+			<div class="section__title animation" data-animation="slide-in-left">
 				<h2><?php echo esc_html( $args['title'] ) ?></h2>
 			</div><!-- /.section__title -->
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['tabs'] ) ) : ?>
 			<div class="section__flex">
-				<div class="section__tabs">
+				<div class="section__tabs animation" data-animation="slide-in-left">
 					<?php foreach ( $args['tabs'] as $index => $tab ) :
 						$is_active_class = '';
 
@@ -24,7 +24,7 @@
 					<div class="section__active-tab-line"></div>
 				</div><!-- /.section__tabs-nav -->
 
-				<div class="section__tabs-content">
+				<div class="section__tabs-content animation" data-animation="fade-in" style="animation-delay: .5s">
 					<?php foreach ( $args['tabs'] as $index => $tab ) :
 						$is_active_class = '';
 

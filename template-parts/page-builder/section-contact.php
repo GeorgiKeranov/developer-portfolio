@@ -1,6 +1,6 @@
 <div id="section-contact-<?php echo $args['index'] ?>" class="section-contact">
 	<div class="container">
-		<div class="section__head">
+		<div class="section__head animation" data-animation="fade-in">
 			<?php if ( !empty( $args['title'] ) ) : ?>
 				<h1><?php echo esc_html( $args['title'] ) ?></h1>
 			<?php endif; ?>
@@ -11,7 +11,7 @@
 		</div><!-- /.section__head -->
 
 		<div class="section__flex">
-			<div class="section__content">
+			<div class="section__content animation" data-animation="slide-in-left" style="animation-delay: .5s">
 				<?php if ( !empty( $args['location'] ) ) : ?>
 					<div class="section__icon-with-text">
 						<img src="<?php bloginfo('stylesheet_directory'); ?>/images/icon-location.png" width="32" height="32" alt="location icon">
@@ -56,7 +56,7 @@
 				<?php endif; ?>
 			</div><!-- /.section__content -->
 
-			<div class="section__form">
+			<div class="section__form animation" data-animation="slide-in-right" style="animation-delay: .5s">
 				<?php if ( !empty( $args['form_title'] ) ) : ?>
 					<h2><?php echo esc_html( $args['form_title'] ) ?></h2>
 				<?php endif; ?>

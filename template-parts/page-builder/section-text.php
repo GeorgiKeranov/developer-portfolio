@@ -9,7 +9,7 @@ if ( !empty( $args['background_image'] ) ) {
 ?>
 
 <div class="section-text<?php echo $class ?>"<?php echo $style ?>>
-	<div class="container">
+	<div class="container animation" data-animation="slide-in-right">
 		<?php echo apply_filters( 'the_content', $args['text'] ) ?>		
 	</div><!-- /.container -->
 </div><!-- /.section-text -->

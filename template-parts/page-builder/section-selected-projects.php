@@ -1,7 +1,7 @@
 <div class="section-selected-projects">
 	<div class="container">
 		<?php if ( !empty( $args['title'] ) ) : ?>
-			<div class="section__title">
+			<div class="section__title animation" data-animation="slide-in-right">
 				<h2><?php echo esc_html( $args['title'] ) ?></h2>
 			</div><!-- /.section__title -->
 		<?php endif; ?>

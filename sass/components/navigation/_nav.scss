@@ -62,12 +62,14 @@
 	@include breakpoint(mobile) {
 		ul {
 			flex-wrap: wrap;
+			margin: 0;
 		}
 	}
 
 	@include breakpoint(mobile-portrait) {
 		li {
-			margin: 0 7px;
+			width: 100%;
+			margin: 0;
 		}
 	}
 }

@@ -7,16 +7,16 @@ $technologies = carbon_get_the_post_meta( 'gk_technologies' );
 
 <div class="section-single-project">
 	<div class="container">
-		<h1><?php the_title() ?></h1>
+		<h1 class="animation" data-animation="fade-in"><?php the_title() ?></h1>
 
 		<div class="section__flex">
 			<?php if ( !empty( $images ) ) : ?>
-				<div class="section__gallery">
+				<div class="section__gallery animation" data-animation="slide-in-left" style="animation-delay: .8s">
 					<?php get_template_part( 'template-parts/section-gallery-lightbox', null, array( 'images' => $images ) ) ?>
 				</div><!-- /.section__gallery -->
 			<?php endif; ?>
 
-			<div class="section__details">
+			<div class="section__details animation" data-animation="slide-in-right" style="animation-delay: .8s">
 				<div class="section__text">
 					<h4><?php _e( 'Project Description:', 'gk' ) ?></h4>
 					

@@ -4,7 +4,7 @@ if ( empty( $args['projects'] ) ) {
 }
 ?>
 
-<div class="section-projects">
+<div class="section-projects animation" data-animation="fade-in">
 	<?php foreach ( $args['projects'] as $id ) :
 		$permalink = get_the_permalink( $id );
 		$title = get_the_title( $id );
