@@ -11,7 +11,7 @@ $technologies = carbon_get_the_post_meta( 'gk_technologies' );
 
 		<div class="section__flex">
 			<?php if ( !empty( $images ) ) : ?>
-				<div class="section__gallery animation" data-animation="slide-in-left" style="animation-delay: .8s">
+				<div class="section__gallery">
 					<?php get_template_part( 'template-parts/section-gallery-lightbox', null, array( 'images' => $images ) ) ?>
 				</div><!-- /.section__gallery -->
 			<?php endif; ?>
