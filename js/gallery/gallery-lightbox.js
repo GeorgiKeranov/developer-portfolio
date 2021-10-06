@@ -24,26 +24,16 @@ export default function galleryLightbox() {
 		e.preventDefault();
 
 		let currentImageSelected = $previewImage.data('image-selected');
-		let previousImageIndex = currentImageSelected - 1;
 
-		if (currentImageSelected == 0) {
-			previousImageIndex = imagesCount - 1;
-		}
-
-		changePreviewImage(previousImageIndex);
+		changePreviewImage(currentImageSelected, 'previous');
 	});
 
 	$previewImageNextButton.on('click', function(e) {
 		e.preventDefault();
 
 		let currentImageSelected = $previewImage.data('image-selected');
-		let previousImageIndex = currentImageSelected + 1;
 
-		if (currentImageSelected == (imagesCount - 1)) {
-			previousImageIndex = 0;
-		}
-
-		changePreviewImage(previousImageIndex);
+		changePreviewImage(currentImageSelected, 'next');
 	});
 
 	$images.on('click', function(e) {
@@ -75,34 +65,24 @@ export default function galleryLightbox() {
 		e.preventDefault();
 
 		let currentImageSelected = $galleryZoomImage.data('image-selected');
-		let previousImageIndex = currentImageSelected - 1;
 
-		if (currentImageSelected == 0) {
-			previousImageIndex = imagesCount - 1;
-		}
-
-		changeZoomImage(previousImageIndex);
+		changeZoomImage(currentImageSelected, 'previous');
 	});
 
 	$galleryZoomNextButton.on('click', function(e) {
 		e.preventDefault();
 
 		let currentImageSelected = $galleryZoomImage.data('image-selected');
-		let previousImageIndex = currentImageSelected + 1;
 
-		if (currentImageSelected == (imagesCount - 1)) {
-			previousImageIndex = 0;
-		}
-
-		changeZoomImage(previousImageIndex);
+		changeZoomImage(currentImageSelected, 'next');
 	});
 
 	$galleryZoomCloseOnClick.on('click', function() {
-		$galleryZoom.removeClass('section__gallery-zoom--active');
+		closeGalleryZoom();
 	});
 
 	$galleryZoomCloseButton.on('click', function() {
-		$galleryZoom.removeClass('section__gallery-zoom--active');
+		closeGalleryZoom();
 	});
 
 	function openGalleryZoom(imageIndex) {
@@ -118,9 +98,58 @@ export default function galleryLightbox() {
 		$galleryZoomImage.attr('src', imageFullUrl);
 		$galleryZoomImage.data('image-selected', imageIndex);
 		$galleryZoom.addClass('section__gallery-zoom--active');
+
+		$('body').keydown(function(e) {
+		let keyPressed = e.keyCode;
+
+			// Left arrrow key pressed
+			if (keyPressed == 37) {
+				let currentImageSelected = $galleryZoomImage.data('image-selected');
+
+				changeZoomImage(currentImageSelected, 'previous');
+			}
+
+			// Right arrow key pressed
+			if (keyPressed == 39) {
+				let currentImageSelected = $galleryZoomImage.data('image-selected');
+
+				changeZoomImage(currentImageSelected, 'next');
+			}
+
+			// Esc key pressed
+			if (keyPressed == 27) {
+				closeGalleryZoom();				
+			}
+		});
 	}
 
-	function changePreviewImage(imageIndex) {
+	function closeGalleryZoom() {
+		$galleryZoom.removeClass('section__gallery-zoom--active');
+
+		$('body').unbind();
+	}
+
+	function changePreviewImage(imageIndex, previousOrNextImage = false) {
+		switch (previousOrNextImage) {
+			case 'next':
+				if (imageIndex == (imagesCount - 1)) {
+					imageIndex = 0;
+					break;
+				}
+
+				imageIndex = imageIndex + 1;
+				break;
+		
+			case 'previous':
+				if (imageIndex == 0) {
+					imageIndex = imagesCount - 1;
+					break;
+				}
+
+				imageIndex = imageIndex - 1;
+				break;
+		}
+
 		let $image = $images.eq(imageIndex);
 		if (!$image.length) {
 			return;
@@ -149,7 +178,27 @@ export default function galleryLightbox() {
 		$previewImage.css('background-image', 'url(' + imageUrl + ')');
 	}
 
-	function changeZoomImage(imageIndex) {
+	function changeZoomImage(imageIndex, previousOrNextImage = false) {
+		switch (previousOrNextImage) {
+			case 'next':
+				if (imageIndex == (imagesCount - 1)) {
+					imageIndex = 0;
+					break;
+				}
+
+				imageIndex = imageIndex + 1;
+				break;
+		
+			case 'previous':
+				if (imageIndex == 0) {
+					imageIndex = imagesCount - 1;
+					break;
+				}
+
+				imageIndex = imageIndex - 1;
+				break;
+		}
+
 		let $image = $images.eq(imageIndex);
 		if (!$image.length) {
 			return;
