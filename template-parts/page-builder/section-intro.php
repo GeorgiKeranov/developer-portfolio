@@ -10,7 +10,7 @@ $text = apply_filters( 'the_content', $args['text'] );
 			</div><!-- /.section__text -->
 
 			<?php if ( !empty( $args['image'] ) ) :
-				$image = wp_get_attachment_image( $args['image'], 'full' ); ?>
+				$image = wp_get_attachment_image( $args['image'], 'large' ); ?>
 				
 				<div class="section__image animation" data-animation="fade-in" style="animation-delay: .75s">
 					<?php echo $image ?>
