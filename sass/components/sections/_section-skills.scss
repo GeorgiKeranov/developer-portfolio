@@ -50,7 +50,7 @@
 			background-color: $color-light-gray-2;
 			top: 50%;
 			right: 100%;
-			transform: translateY(-50%);
+			transform: translate3d(0, -50%, 0);
 			transition: background-color .3s;
 		}
 

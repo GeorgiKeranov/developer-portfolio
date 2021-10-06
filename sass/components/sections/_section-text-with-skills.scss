@@ -155,5 +155,15 @@
 				margin-bottom: 3px;
 			}
 		}
+
+		.section__skills {
+			@for $i from 1 through 10 {
+				.section__skill:nth-child(#{$i}) {
+					.section__skill-bar-fill {
+						transition: none;
+					}
+				}
+			}
+		}
 	}
 }

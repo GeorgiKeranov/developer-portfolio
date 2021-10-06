@@ -24,7 +24,7 @@
 					<div class="section__active-tab-line"></div>
 				</div><!-- /.section__tabs-nav -->
 
-				<div class="section__tabs-content animation" data-animation="fade-in" style="animation-delay: .5s">
+				<div class="section__tabs-content animation" data-animation="fade-in">
 					<?php foreach ( $args['tabs'] as $index => $tab ) :
 						$is_active_class = '';
 
