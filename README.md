@@ -22,6 +22,7 @@ Page builder contains these sections:
   - [Page Templates](#page-templates)
   - [Shortcodes](#shortcodes)
 - [Installation](#installation)
+- [Design Images](#design-images)
 
 ## Technologies used
 - Wordpress
@@ -96,3 +97,14 @@ $ yarn install
 - `yarn watch:js` : watches all JavaScript and recompiles the bundle js file when they change.
 - `yarn compile` : compiles all SASS and JavaScript files to one css and one js file.
 - `yarn bundle` : generates a .zip archive for distribution, excluding development and system files.
+
+## Design Images
+![intro-section](https://user-images.githubusercontent.com/22518317/136260344-d1d14aba-3399-48eb-b4ff-f30c3ec3e962.png)
+![about-section](https://user-images.githubusercontent.com/22518317/136260363-f7a0a92a-9949-4b75-8fdb-35d9c2921b0c.png)
+![experience-and-skills-section](https://user-images.githubusercontent.com/22518317/136260388-3482aa92-6dc0-482a-bfd3-6d69d53debc6.png)
+![projects-section](https://user-images.githubusercontent.com/22518317/136260405-a27136e9-8467-433e-957c-b6941e0d9a33.png)
+![footer](https://user-images.githubusercontent.com/22518317/136260421-554f4c0b-1f1e-4886-87b7-f7d931cccca4.png)
+![skills-section](https://user-images.githubusercontent.com/22518317/136260445-a07da282-2faf-4c20-9195-636db8e04f90.png)
+![interests-and-hobies-section](https://user-images.githubusercontent.com/22518317/136260473-54b2a008-3b49-4d7e-a72e-6766ee4e9888.png)
+![project-detail](https://user-images.githubusercontent.com/22518317/136260494-3a2c8cc0-028b-48be-a1b7-4af090907229.png)
+
