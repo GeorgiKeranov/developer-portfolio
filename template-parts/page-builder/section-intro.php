@@ -1,6 +1,5 @@
 <?php 
 $text = apply_filters( 'the_content', $args['text'] );
-$image = wp_get_attachment_image( $args['image'], 'medium' );
 ?>
 
 <div id="section-intro-<?php echo $args['index'] ?>" class="section-intro">
@@ -10,8 +9,10 @@ $image = wp_get_attachment_image( $args['image'], 'medium' );
 				<?php echo $text ?>
 			</div><!-- /.section__text -->
 
-			<?php if ( !empty( $image ) ) : ?>
-				<div class="section__image animation" data-animation="pop-in" style="animation-delay: .75s">
+			<?php if ( !empty( $args['image'] ) ) :
+				$image = wp_get_attachment_image( $args['image'], 'full' ); ?>
+				
+				<div class="section__image animation" data-animation="fade-in" style="animation-delay: .75s">
 					<?php echo $image ?>
 				</div><!-- /.section__image -->
 			<?php endif; ?>

@@ -1,7 +1,7 @@
 .section-intro {
 	position: relative;
-	padding: 150px 0;
 	color: $color-white;
+	overflow: hidden;
 
 	&:before {
 		content: '';
@@ -22,12 +22,14 @@
 	}
 
 	.section__text {
-		width: 70%;
-		padding-right: 5%;
+		width: 60%;
+		padding: 30px 2% 30px 0;
 	}
 
 	.section__image {
-		width: 30%;
+		width: 38%;
+		margin-top: 20px;
+		margin-bottom: -7px;
 		text-align: right;
 	}
 
@@ -35,25 +37,13 @@
 		font-size: 20px;
 	}
 
-	@include breakpoint(desktop) {
-		padding: 100px 0;
-	}
-
-	@include breakpoint(desktop-small) {
-		padding: 75px 0;
-	}
-
 	@include breakpoint(tablet-portrait) {
-		padding: 50px 0;
-
 		p {
 			font-size: 17px;
 		}
 	}
 
 	@include breakpoint(mobile) {
-		padding: 30px 0;
-		
 		.section__flex {
 			flex-wrap: wrap;
 			text-align: center;
