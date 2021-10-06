@@ -14,7 +14,7 @@
 					<?php endif; ?>
 				</div>
 
-				<div class="section__text animation" data-animation="slide-in-left" style="animation-delay: .3s">
+				<div class="section__text animation" data-animation="slide-in-left">
 					<?php echo apply_filters( 'the_content', $args['text_left'] ); ?>
 				</div><!-- /.section__text -->
 			</div><!-- /.section__left -->
