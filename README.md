@@ -107,4 +107,4 @@ $ yarn install
 ![skills-section](https://user-images.githubusercontent.com/22518317/136260445-a07da282-2faf-4c20-9195-636db8e04f90.png)
 ![interests-and-hobies-section](https://user-images.githubusercontent.com/22518317/136260473-54b2a008-3b49-4d7e-a72e-6766ee4e9888.png)
 ![project-detail](https://user-images.githubusercontent.com/22518317/136260494-3a2c8cc0-028b-48be-a1b7-4af090907229.png)
-
+![contact](https://user-images.githubusercontent.com/22518317/136268436-a6c8243f-d5e4-40a5-bbcd-3853eb1fee4e.png)
