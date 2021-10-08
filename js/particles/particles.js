@@ -5,10 +5,10 @@ export default function particles() {
 	let $sectionContact = $('#section-contact-0');
 
 	if ($sectionIntro.length) {
-		particlesJS.load('section-intro-0', globalVariables.siteUrl + '/js/particles/particles.json');
+		particlesJS.load('section-intro-0', globalVariables.siteUrl + '/particles.json');
 	}
 
 	if ($sectionContact.length) {
-		particlesJS.load('section-contact-0', globalVariables.siteUrl + '/js/particles/particles.json');
+		particlesJS.load('section-contact-0', globalVariables.siteUrl + '/particles.json');
 	}
 }
