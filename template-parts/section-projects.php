@@ -4,7 +4,7 @@ if ( empty( $args['projects'] ) ) {
 }
 ?>
 
-<div class="section-projects animation" data-animation="fade-in">
+<div class="section-projects">
 	<?php foreach ( $args['projects'] as $id ) :
 		$permalink = get_the_permalink( $id );
 		$title = get_the_title( $id );
@@ -28,7 +28,7 @@ if ( empty( $args['projects'] ) ) {
 		$excerpt = get_the_excerpt( $id );
 		?>
 		
-		<div class="section__project">
+		<div class="section__project animation" data-animation="fade-in">
 			<div class="section__project-background<?php echo $class ?>"<?php echo $background_style ?>>
 				<div class="section__project-content">
 					<?php if ( !empty( $logo_style ) ) : ?>
