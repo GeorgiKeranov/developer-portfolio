@@ -19,16 +19,21 @@
 		<?php endif; ?>
 
 		<?php if ( !empty( $args['gallery'] ) ) : ?>
-			<div class="section__gallery animation" data-animation="fade-in">
-				<?php foreach ( $args['gallery'] as $image ) :
+			<div class="section__gallery">
+				<?php foreach ( $args['gallery'] as $index => $image ) :
 					$image_url = wp_get_attachment_image_url( $image, 'large' );
 
 					if ( empty( $image_url ) ) {
 						continue;
 					}
+
+					$slide_in_animation = 'slide-in-left';
+					if ( ($index + 1) % 2 == 0 ) {
+						$slide_in_animation = 'slide-in-right';
+					}
 					?>
 
-					<div class="section__image">
+					<div class="section__image animation" data-animation="<?php echo $slide_in_animation ?>">
 						<div class="section__background-image" style="background-image: url(<?php echo $image_url ?>)"></div><!-- /.section__background-image -->
 					</div><!-- /.section__image -->
 				<?php endforeach; ?>
