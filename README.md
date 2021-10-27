@@ -83,7 +83,7 @@ Use this shortcode to display the current year.
 
 ### Setup
 
-To use this theme you need to install the necessary Node.js and Composer dependencies :
+To use this theme you need to install the necessary Node.js and Composer dependencies:
 
 ```sh
 $ composer install
