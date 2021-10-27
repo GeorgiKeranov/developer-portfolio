@@ -1,7 +1,6 @@
 # Developer Portfolio Theme
 
-Custom WordPress theme build for developers to show their personality, experience, skills and projects that they have built.\
-The theme is responsive and has a page builder template from which you can add custom sections in the order you want.
+Custom WordPress theme build for developers to show their personality, experience, skills and projects that they have built. The theme is responsive and has a page builder template from which you can add custom sections in the order you want.
 
 ## Table of contents
 - [Technologies used](#technologies-used)
