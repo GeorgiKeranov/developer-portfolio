@@ -1,18 +1,7 @@
 # Developer Portfolio Theme
 
 Custom WordPress theme build for developers to show their personality, experience, skills and projects that they have built.\
-The theme is responsive and has a page builder template from which you can add custom sections in the order you want.\
-
-Page builder contains these sections:
-- Section Intro
-- Section Text
-- Section Tabs with Text
-- Section Text with Skills
-- Section All Projects
-- Section Selected Projects
-- Section Skills
-- Section Words With Image
-- Section Contact
+The theme is responsive and has a page builder template from which you can add custom sections in the order you want.
 
 ## Table of contents
 - [Technologies used](#technologies-used)
@@ -62,6 +51,17 @@ Socials can be managed from Admin Panel -> Theme Options -> Global.\
 #### Page Builder
 
 Page Builder template contains several sections that can be added and ordered as you wish.
+
+Page builder contains these sections:
+- Section Intro
+- Section Text
+- Section Tabs with Text
+- Section Text with Skills
+- Section All Projects
+- Section Selected Projects
+- Section Skills
+- Section Words With Image
+- Section Contact
 
 ---------------------
 
