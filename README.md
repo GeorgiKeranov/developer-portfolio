@@ -32,7 +32,7 @@ Custom WordPress theme build for developers to show their personality, experienc
 Header contains logo, menu and socials.\
 Logo can be changed from Admin Panel -> Appearance -> Customize -> Site Identity -> Logo.\
 Menu can be managed from Admin Panel -> Appearance -> Menus -> Main Menu.\
-Socials can be managed from Admin Panel -> Theme Options -> Global.\
+Socials can be managed from Admin Panel -> Theme Options -> Global.
 
 ---------------------
 
@@ -41,7 +41,7 @@ Socials can be managed from Admin Panel -> Theme Options -> Global.\
 Footer contains text, menu, socials and copyright.
 Text and copyright can be managed from Admin Panel -> Theme Options -> Footer.\
 Menu can be managed from Admin Panel -> Appearance -> Menus -> Main Menu.\
-Socials can be managed from Admin Panel -> Theme Options -> Global.\
+Socials can be managed from Admin Panel -> Theme Options -> Global.
 
 ---------------------
 
