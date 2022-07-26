@@ -133,12 +133,6 @@
 	}
 
 	@include breakpoint(mobile-portrait) {
-		text-align: center;
-
-		.section__title {
-			justify-content: center;
-		}
-
 		.section__flex {
 			flex-wrap: wrap;
 		}
