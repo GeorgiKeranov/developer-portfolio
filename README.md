@@ -78,12 +78,12 @@ Use this shortcode to display the current year.
 
 `developer-theme` requires the following dependencies:
 
-- [Yarn](https://yarnpkg.com/) or [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/)
 - [Composer](https://getcomposer.org/)
 
 ### Setup
 
-To use this theme you need to install the necessary Node.js and Composer dependencies:
+To use this theme you need to install the Composer and Yarn packages:
 
 ```sh
 $ composer install
